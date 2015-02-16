@@ -1,0 +1,34 @@
+{
+  "name": "nvc-website",
+  "version": "0.1.0",
+  "description": "levenincompassie.nl website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markmarijnissen/nvc-website.git"
+  },
+  "author": "Mark Marijnissen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markmarijnissen/nvc-website/issues"
+  },
+  "homepage": "https://github.com/markmarijnissen/nvc-website",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "polyfill-function-prototype-bind": "0.0.1",
+    "raf": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^1.0.0",
+    "optimist": "^0.6.1",
+    "css-loader": "^0.9.0",
+    "file-loader": "^0.8.1",
+    "style-loader": "^0.8.2",
+    "url-loader": "^0.5.5",
+    "less": "^2.2.0",
+    "less-loader": "^2.0.0",
+    "webpack": "^1.4.15"
+  }
+}
