@@ -1,4 +1,4 @@
-Verbindend Communiceren is gebaseerd op Geweldloze Communicatie. Geweldloze Communicatie is bedacht door Marshal Rosenberg en werd oorspronkelijk gebruikt om conflicten op te lossen. Dat kunnen politieke conflicten zijn, maar ook conflicten op het werk, in je relatie of in jezelf.
+Communiceren met compassie is gebaseerd op Geweldloze Communicatie. Geweldloze Communicatie is bedacht door Marshal Rosenberg en is ontwikkeld om conflicten op te lossen. Dat kunnen politieke conflicten zijn, maar ook conflicten op het werk, in je relatie of in jezelf.
 
 Geweldloze Communicatie werkt ontwapenend omdat je jezelf leert uitdrukken op een niet-aanvallende manier. Je krijgt meer helderheid over je eigen gevoelens en behoeftes, en je maakt contact met de gevoelens en behoeftes van een ander. Daarmee ontwikkel je empathie voor jezelf en voor de ander.
 

@@ -4,7 +4,7 @@
   "description": "levenincompassie.nl website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "production":"webpack --minify && harp compile"
+    "production": "webpack --minify && harp compile"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/markmarijnissen/nvc-website",
   "dependencies": {
+    "autoprefixer-loader": "^1.2.0",
     "jquery": "^2.1.3",
     "polyfill-function-prototype-bind": "0.0.1",
     "raf": "^2.0.4"

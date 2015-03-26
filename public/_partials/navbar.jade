@@ -1,0 +1,9 @@
+ul.nav.nav-pills: each item in menu
+  if item.href
+    li: a(href="#{item.href}") #{item.title}
+  else
+    li.dropdown
+      a.dropdown-toggle(href="#",data-target="#",data-toggle="dropdown") #{item.title}
+      ul.dropdown-menu
+        each subitem in item.items
+          li: a(href="#{subitem.href}") #{subitem.title}

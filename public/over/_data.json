@@ -1,5 +1,12 @@
 {
 	"markmarijnissen":{
+		"format":"row",
 		"title":"Mark Marijnissen"
+	},
+	"tarieven":{
+		"title":"Tarieven"
+	},
+	"contact":{
+		"title":"Contact"
 	}
 }

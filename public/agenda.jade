@@ -1,0 +1,18 @@
+.col-xs-12.col-md-8.col-md-offset-2
+	if !hideHeader
+		h1 Agenda
+	table.table
+		if !hideHeader
+			tr
+				th Datum
+				th Activiteit
+				th Tijd
+				th Locatie
+				th Kosten
+		each date in ['Zaterdag 4 april','Zaterdag 2 mei','Zaterdag 23 mei','Zaterdag 13 juni','Zaterdag 4 juli']
+			tr
+				td #{date}
+				td: a(href="/aanbod/oefengroep") Open Oefengroep
+				td 13:30 - 17:00
+				td De Lindenberg
+				td &euro; 5-30

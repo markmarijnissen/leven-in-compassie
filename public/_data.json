@@ -1,6 +1,10 @@
 {
 	"index":{
-		"title":"Leven in Compassie",
-		"layout":"_index_layout"
+		"hide_title":true,
+		"title":"Leven in Compassie"
+	},
+	"agenda":{
+		"format":"row",
+		"title":"Agenda"
 	}
 }
