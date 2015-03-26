@@ -6,7 +6,7 @@ Je kunt me bereiken door een e-mail te sturen naar **mark@levenincompassie.nl**.
 
 ## Team-building
 
-Herken je dit: Dat je niet durft uit te spreken wat je écht denkt en voelt, omdat je bang ben dat dit "ongepast" of "onprofessioneel" is?
+Herken je dit: Dat je op de werkvloer niet durft uit te spreken wat je écht denkt en voelt, omdat je bang ben dat dit "ongepast" of "onprofessioneel" is?
 
 Ik geloof dat betere communicatie met collega's leidt tot een leukere werksfeer, meer werkplezier en meer inzet. 
 
