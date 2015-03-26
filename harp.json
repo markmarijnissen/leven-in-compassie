@@ -25,6 +25,9 @@
 					},{
 						"title":"Voor bedrijven",
 						"href":"/aanbod/voor-bedrijven"
+					},{
+						"title":"Tarieven",
+						"href":"/over/tarieven"
 					}
 				]
 			},{
@@ -39,9 +42,6 @@
 				"title":"Over",
 				"items":[
 					{
-						"title":"Tarieven",
-						"href":"/over/tarieven"
-					},{
 						"title":"Mark Marijnissen",
 						"href":"/over/markmarijnissen"
 					},{

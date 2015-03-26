@@ -1,9 +1,6 @@
 Voor vragen en informatie kun je me bereiken op **mark@levenincompassie.nl**.
 
-Naast de [open oefengroep](/aanbod/oefengroep) ben ik ook beschikbaar voor:
-
-* Lezing of introductie workshop
-* Workshops bij bedrijven
-* Individuele Training
-* Individuele Empathie Sessie
-* Relatie Sessie 
+**Leven in Compassie**<br/>
+Wolfstraat 180<br/>
+6531LR Nijmegen<br/>
+KvK: 50210041 
