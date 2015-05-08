@@ -13,7 +13,14 @@ html
     link(href='http://fonts.googleapis.com/css?family=PT+Serif:400,700|Open+Sans:300', rel='stylesheet', type='text/css')  
   body#wrapper
     #navbar
-      != partial('_partials/navbar')       
+      != partial('_partials/navbar')
+    if headerimg
+      .headerimg
+        //-.headerimg(style="background-image: url(\"/assets/#{headerimg}\");")
+        img(src="/assets/#{headerimg}")
+        .overlay
+        if !hide_title
+          h1.title!= title    
     #layout.container
       if format === 'container'
         != yield
@@ -22,7 +29,7 @@ html
           != yield
       else 
         .col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1
-          if !hide_title
+          if !hide_title && !headerimg
             h1.title!= title
           != yield
     script.

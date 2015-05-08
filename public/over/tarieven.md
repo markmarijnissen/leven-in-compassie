@@ -1,13 +1,14 @@
 <table class="table table-striped table-condensed">
 	<tr><td>Open Oefengroep</td><td>&euro; 5 - 30</td></tr>
-	<tr><td>1-op-1 Training (1,5 uur)</td><td>&euro; 30 - 60</td></tr>
-	<tr><td>1-op-1 Compassie (1,5 uur)</td><td>&euro; 30 - 60</td></tr>
-	<tr><td>Relatie Sessie (1,5 uur)</td><td>&euro; 30 - 60</td></tr>
-	<tr><td>Workshop voor bedrijven (excl. BTW)</td><td>&euro; 250 - 500</td></tr>
+	<tr><td>Avondcursus: Ontdek de kracht van compassie</td><td>&euro; 180 - 350</td></tr>
+	<tr><td>1-op-1 Training (1,5 uur)</td><td>&euro; 45 - 90</td></tr>
+	<tr><td>1-op-1 Compassie (1,5 uur)</td><td>&euro; 45 - 90</td></tr>
+	<tr><td>Relatie Sessie (1,5 uur)</td><td>&euro; 45 - 90</td></tr>
+	<tr><td>Workshop voor bedrijven (excl. BTW)</td><td>&euro; 350 - 700</td></tr>
 </table>
 
 
-Alle tarieven hebben een schaal, afhankelijk van je wat het je waard is en je financiele draagkracht.
+Alle tarieven hebben een schaal, afhankelijk van wat het je waard is en je financiele draagkracht.
 
 * Ik wil dat je **geeft wat het je waard is**: 100% ja!
 * én ik wil graag **meer tijd om Geweldloze Communicatie delen met de wereld**. 

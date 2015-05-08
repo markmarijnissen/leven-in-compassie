@@ -6,6 +6,8 @@ require('./headroom');
 require('./layout.less');
 $(function(){
 
+	var offset = $('.headerimg img').height() || 100;
+
 	// HeadRoom
 	var navbar = $('#navbar').get(0);
 	var headroom  = new Headroom(navbar,{
@@ -13,7 +15,7 @@ $(function(){
 			up: 5,
 			down: 10
 		},
-		offset: 100
+		offset: offset
 	});
 	headroom.init();
 });

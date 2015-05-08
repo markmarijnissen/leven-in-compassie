@@ -4,14 +4,6 @@ Tijdens een kennismakingsgesprek kunnen we ontdekken of ik iets kan aanbieden da
 
 Je kunt me bereiken door een e-mail te sturen naar **mark@levenincompassie.nl**. 
 
-## Team-building
-
-Herken je dit: Dat je op de werkvloer niet durft uit te spreken wat je écht denkt en voelt, omdat je bang ben dat dit "ongepast" of "onprofessioneel" is?
-
-Ik geloof dat betere communicatie met collega's leidt tot een leukere werksfeer, meer werkplezier en meer inzet. 
-
-In mijn workshops creeër ik een veilige omgeving waarbij iedereen op een compassievolle manier gehoord kan worden. De nadruk ligt op het bevorderen van begrip, verbinding en team-spirit door te werken met échte situaties van de deelnemers.
-
 ## Workshops
 
 **Geweldloze Communicatie** biedt ook vaardigheden die kunnen worden ingezet in op de werkvloer. Denk bijvoorbeeld aan:
@@ -20,6 +12,16 @@ In mijn workshops creeër ik een veilige omgeving waarbij iedereen op een compas
 * Empatisch luisteren: Geef je klanten het gevoel dat ze écht gehoord worden.
 * Conflict bemiddeling voor managers: Hoe laat je alle neuzen één kant op wijzen?
 * Onderhandelen: Welke "JA" zit er verstopt achter een NEE?
+* Feedback geven: Hoe kun je op een verbindende manier feedback of kritiek geven?
+
+## Team-building
+
+Herken je dit: Dat je op de werkvloer niet durft uit te spreken wat je écht denkt en voelt, omdat je bang ben dat dit "ongepast" of "onprofessioneel" is?
+
+Ik geloof dat open communicatie met collega's leidt tot een leukere werksfeer, meer werkplezier en meer inzet. 
+
+In mijn workshops creeër ik een veilige omgeving waarbij iedereen op een compassievolle manier gehoord kan worden. De nadruk ligt op het bevorderen van begrip, verbinding en betrokkenheid door te werken met échte situaties van de deelnemers. Iedereen krijgt de kans te vertellen hoe het is om als
+persoon in het team te zitten.
 
 ## Conflict bemiddeling
 
@@ -27,4 +29,4 @@ Voel je wel eens spanning op de werkvloer door onuitgesproken frustraties tussen
 
 Ik geloof dat elk verwijt, frustratie, spanning een mooie onderliggende reden heeft. In een conflict is het vaak moeilijk die onderliggende reden te horen. Ik help door in een veilige, onpartijdige omgeving elke vervelende boodschap te vertalen naar iets moois. Dit creeërt ruimte, begrip, compassie en verbinding. 
 
-Zodra het lukt om compassie voor elkaar te voelen, help ik met het maken van concrete afspraken die zorgen voor meer harmonie en vrede.
+Zodra het lukt om compassie voor elkaar te voelen, help ik met het maken van concrete afspraken die zorgen dat mensen weer fijn samen werken 

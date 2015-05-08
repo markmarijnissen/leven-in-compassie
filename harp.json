@@ -14,8 +14,18 @@
 				"title":"Aanbod",
 				"items":[
 					{
+						"title":"Overzicht",
+						"href":"/aanbod/index.html"
+					},{
+						"title":"---"
+					},{
+						"title":"Avondcursus: Ontdek de kracht van compassie",
+						"href":"/aanbod/cursus"
+					},{
 						"title":"Open Oefengroep",
 						"href":"/aanbod/oefengroep"
+					},{
+						"title":"---"
 					},{
 						"title":"1-op-1 Training",
 						"href":"/aanbod/1-op-1-training"
@@ -23,8 +33,13 @@
 						"title":"1-op-1 Compassie",
 						"href":"/aanbod/1-op-1-compassie"
 					},{
+						"title":"Relatie Sessie",
+						"href":"/aanbod/relatie-sessie"
+					},{
 						"title":"Voor bedrijven",
 						"href":"/aanbod/voor-bedrijven"
+					},{
+						"title":"---"
 					},{
 						"title":"Tarieven",
 						"href":"/over/tarieven"
@@ -35,7 +50,8 @@
 				"items":[
 					{
 						"title":"Introductie",
-						"href":"/artikelen/introductie"
+						"href":"/introNVC",
+						"blank": true
 					}
 				]
 			},{

@@ -4,7 +4,7 @@
   "description": "levenincompassie.nl website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "production": "webpack --minify && harp compile"
+    "build": "webpack --minify && harp compile"
   },
   "repository": {
     "type": "git",

@@ -1,18 +1,30 @@
 .col-xs-12.col-md-8.col-md-offset-2
-	if !hideHeader
-		h1 Agenda
+	h1.text-center Agenda
 	table.table
 		if !hideHeader
 			tr
 				th Datum
-				th Activiteit
 				th Tijd
-				th Locatie
-				th Kosten
-		each date in ['Zaterdag 4 april','Zaterdag 2 mei','Zaterdag 23 mei','Zaterdag 13 juni','Zaterdag 4 juli']
+				th Activiteit
+		each date in ['Zaterdag 4 april','Zaterdag 2 mei']
 			tr
 				td #{date}
-				td: a(href="/aanbod/oefengroep") Open Oefengroep
 				td 13:30 - 17:00
-				td De Lindenberg
-				td &euro; 5-30
+				td: a(href="/aanbod/oefengroep") Open Oefengroep
+		tr
+			td Donderdag 21 mei
+			td 19:30 - 22:15
+			td: a(href="/aanbod/oefengroep") Open Oefengroep
+		each date,index in ['Donderdag 4 juni','Donderdag 11 juni','Donderdag 18 juni','Donderdag 25 juni','Donderdag 2 juli','Donderdag 9 juli']
+			tr
+				td #{date}
+				td 19:30 - 22:15
+				td: a(href="/aanbod/cursus") Ontdek de kracht van Compassie (#{index+1}/6)
+	p
+		| Alle activiteiten vinden plaats in  
+		a(href="#{locatie_lindenberg}",target="_blank") De Lindenberg, Nijmegen. 
+		| Informatie over de 
+		a(href="/over/tarieven") kosten
+		|  lees je 				
+		a(href="/over/tarieven") hier
+		| .
