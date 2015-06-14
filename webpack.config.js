@@ -9,10 +9,13 @@ var version = require(path.resolve(__dirname,'package.json')).version;
 
 var config = {
     context: path.join(__dirname,'src'),
-    entry: "./main.js",
+    entry: {
+        "main":"./main.js",
+        "reveal":"./revealjs/index.js"
+    },
     output: {
-        path: __dirname,
-        filename: "public/bundle.js", 
+        path: path.join(__dirname,'public'),
+        filename: "[name]-bundle.js", 
     },
     resolve: {
         alias: {
@@ -23,16 +26,18 @@ var config = {
     module: {
         loaders: [
             { test: /\.json$/,   loader: "json-loader" },
-            { test: /\.css$/,    loader: "style-loader!css-loader!autoprefixer-loader?browsers=last 3 version" },
-            { test: /\.less$/,   loader: "style-loader!css-loader!autoprefixer-loader?browsers=last 3 version!less-loader" },
+            { test: /\.css$/,    loader: "style-loader!css-loader" },
+            { test: /\.less$/,   loader: "style-loader!css-loader!less-loader" },
             { test: /\.jade$/,   loader: "jade-loader?self" },
-            { test: /\.png$/,    loader: "url-loader?name=public/bundle/[hash].[ext]&limit=5000" },
-            { test: /\.jpg$/,    loader: "url-loader?name=public/bundle/[hash].[ext]&limit=5000" },
-            { test: /\.gif$/,    loader: "url-loader?name=public/bundle/[hash].[ext]&limit=5000" },
-            { test: /\.woff$/,   loader: "url-loader?name=public/bundle/[hash].[ext]&limit=5000" },
-            { test: /\.eot$/,    loader: "file-loader?name=public/bundle/[hash].[ext]" },
-            { test: /\.ttf$/,    loader: "file-loader?name=public/bundle/[hash].[ext]" },
-            { test: /\.svg$/,    loader: "file-loader?name=public/bundle/[hash].[ext]" },
+            { test: /\.png$/,    loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.jpg$/,    loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.gif$/,    loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.woff$/,   loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.woff2$/,   loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.eot$/,   loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.otf$/,   loader: "url-loader?name=/bundle/[hash].[ext]&limit=5000" },
+            { test: /\.ttf$/,    loader: "file-loader?name=/bundle/[hash].[ext]" },
+            { test: /\.svg$/,    loader: "file-loader?name=/bundle/[hash].[ext]" },
         ]
     },
     plugins:[

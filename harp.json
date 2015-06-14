@@ -19,9 +19,6 @@
 					},{
 						"title":"---"
 					},{
-						"title":"Avondcursus: Ontdek de kracht van compassie",
-						"href":"/aanbod/cursus"
-					},{
 						"title":"Open Oefengroep",
 						"href":"/aanbod/oefengroep"
 					},{
@@ -46,15 +43,11 @@
 					}
 				]
 			},{
-				"title":"Artikelen",
-				"items":[
-					{
 						"title":"Introductie",
 						"href":"/introNVC",
 						"blank": true
 					}
-				]
-			},{
+			,{
 				"title":"Over",
 				"items":[
 					{

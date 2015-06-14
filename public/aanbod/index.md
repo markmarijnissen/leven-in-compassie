@@ -1,6 +1,8 @@
+<!--
 ### [Ontdek de kracht van compassie](/aanbod/cursus)
 
 Leer in 6 avonden hoe je met behulp van geweldloze communicatie meer warmte, verbinding en kracht in je leven kunt brengen. <br/>[Lees meer &rarr;](/aanbod/cursus)
+-->
 
 ### [Open Oefengroep](/aanbod/oefengroep)
 

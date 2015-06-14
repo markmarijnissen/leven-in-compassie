@@ -1,16 +1,24 @@
 #navbar {
-	font-family: 'Open Sans', Arial, sans-serif;
+    z-index: 1000;
+	font-family: 'custom_bariol', Arial, sans-serif;
 	text-align:center;
 	h1 {  
 		font-size: 28px;
  		margin-top: 10px;
 	}
 	ul.nav-pills { 
+		border-bottom-left-radius: 5px;
+	    border-bottom-right-radius: 5px;
+	    background-color: @body-bg;
 		display:inline-block; 
 		&>li {
 			display: inline;
 			&> a {
 				float: left;
+				&:hover {
+					background-color: lighten(@body-bg,3%);
+					color: @link-color;
+				}
 			}
 		}
 

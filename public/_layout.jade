@@ -7,31 +7,41 @@ html
       title #{title} - Leven in Compassie 
     else
       title Leven in Compassie  
-    meta(name='description', content='') 
-    meta(name='viewport', content='width=device-width, initial-scale=1') 
-    script(type='text/javascript', src='/bundle.js')  
-    link(href='http://fonts.googleapis.com/css?family=PT+Serif:400,700|Open+Sans:300', rel='stylesheet', type='text/css')  
+
+    meta(name="author" content="Mark Marijnissen")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name='viewport', content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui") 
+    script(type='text/javascript', src='/main-bundle.js')      
+    if revealjs
+      script(src="/reveal-bundle.js")
   body#wrapper
     #navbar
       != partial('_partials/navbar')
     if headerimg
-      .headerimg
-        //-.headerimg(style="background-image: url(\"/assets/#{headerimg}\");")
-        img(src="/assets/#{headerimg}")
+      //-.headerimg
+      .headerimg(style="background-image: url(\"/assets/#{headerimg}\");")
+        //-img(src="/assets/#{headerimg}")
         .overlay
         if !hide_title
-          h1.title!= title    
-    #layout.container
-      if format === 'container'
-        != yield
-      else if format === 'row'
-        .row
+          h1.title!= title  
+    if revealjs
+      .reveal
+        .slides
           != yield
-      else 
-        .col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1
-          if !hide_title && !headerimg
-            h1.title!= title
+    else  
+      #layout.container
+        if format === 'container'
           != yield
+        else if format === 'row'
+          .row
+            != yield
+        else 
+          .col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1
+            if !hide_title && !headerimg
+              h1.title!= title
+            != yield
+        
     script.
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

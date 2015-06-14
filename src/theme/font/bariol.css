@@ -1,0 +1,60 @@
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-light.eot');
+    src: url('bariol-light.eot?#iefix') format('embedded-opentype'),
+         url('bariol-light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-light-italic.eot');
+    src: url('bariol-light-italic.eot?#iefix') format('embedded-opentype'),
+         url('bariol-light-italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-regular.eot');
+    src: url('bariol-regular.eot?#iefix') format('embedded-opentype'),
+         url('bariol-regular.woff2') format('woff2'),
+         url('bariol-regular.woff') format('woff'),
+         url('bariol-regular.ttf') format('truetype'),
+         url('bariol-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-regular-italic.eot');
+    src: url('bariol-regular-italic.eot?#iefix') format('embedded-opentype'),
+         url('bariol-regular-italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-bold.eot');
+    src: url('bariol-bold.eot?#iefix') format('embedded-opentype'),
+         url('bariol-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'custom_bariol';
+    src: url('bariol-bold-italic.eot');
+    src: url('bariol-bold-italic.eot?#iefix') format('embedded-opentype'),
+         url('bariol-bold-italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+
+}

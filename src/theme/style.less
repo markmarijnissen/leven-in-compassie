@@ -1,5 +1,6 @@
 @import "./bootstrap.less";
 @import "./navbar.less";
+@import "./font/bariol.css";
 
 .menu-btn {
 	cursor: pointer;
@@ -14,8 +15,33 @@ blockquote {
 	text-align: center;
 }
 .home-title {
-	margin-top: 0;
-	margin-bottom: 0;
+	text-transform: uppercase;
+	line-height: 1;
+	//font-size: 36px;
+	font-size: 28px;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.reveal h2 {
+	margin: 0;
+}
+@btn-next-bg: @body-bg;
+@btn-next-color: @brand-primary;
+.btn-next {
+    background-color: @body-bg;
+    color: @btn-next-color;
+    border-radius: 12px;
+    line-height: 35px;
+    padding: 10px 16px 5px;
+
+    i {
+    	font-size: 20px;
+    }
+    &:hover {
+    	color: @btn-next-color;
+    	background-color: lighten(@body-bg,5%);
+    }
 }
 
 .headroom--not-top {
@@ -31,13 +57,23 @@ blockquote {
  	//background-image: url("/assets/texture.png")
  }
 
+.headerimg:after {
+	padding-top: 37.5%;
+	display: block;
+	content: '';
+}
+
 .headerimg {
+ 	background-size: cover;
+ 	background-position: center;
  	position: relative;
  	width: 100%;
  	margin-bottom: 50px;
 
 	img {
 		width: 100%;
+		position: absolute;
+		top: 0;
 	 	background-size: cover;
 	 	background-position: center;
 	}

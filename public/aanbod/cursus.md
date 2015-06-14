@@ -1,3 +1,7 @@
+<div class="alert alert-danger">
+<strong>Opgelet</strong>: Wegens te weinig aanmeldingen gaat de cursus niet door.
+</div>
+
 Leer in 6 avonden hoe je met behulp van **geweldloze communicatie** meer warmte, verbinding en kracht in je leven kunt brengen.
 
 ## Wat leer je?
@@ -59,12 +63,12 @@ We gaan als volgt te werk:
 ## Tijd en datum:
 Van 19:30 tot 22:15 op:
 
-1. Donderdag 4 juni 
 1. Donderdag 11 juni
-1. Donderdag 18 juni
 1. Donderdag 25 juni
 1. Donderdag 2 juli
 1. Donderdag 9 juli
+1. Donderdag 16 juli
+1. Donderdag 23 juli
 
 ## Kosten:
 180-350 euro, [naar wat het je waard is en financiele draagkracht](/over/tarieven). 
@@ -78,7 +82,9 @@ Houdt geld je tegen om aan deze cursus mee te doen? Neem dan contact met me op.
 
 ## Aanmelden
  
-Stuur een e-mail naar [mark@levenincompassie.nl](mailto:mark@levenincompassie.nl).
+<div class="alert alert-danger">
+<strong>Opgelet</strong>: Wegens te weinig aanmeldingen gaat de cursus niet door.
+</div>
 
 Weet je nog niet zeker of dit iets voor je is? Kom eerst eens kijken bij de [open oefengroep](/aanbod/oefengroep).
 

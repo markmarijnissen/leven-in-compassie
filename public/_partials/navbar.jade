@@ -1,6 +1,9 @@
 ul.nav.nav-pills: each item in menu
   if item.href
-    li: a(href="#{item.href}") #{item.title}
+    if item.blank
+      li: a(href="#{item.href}",target="_blank") #{item.title}
+    else
+      li: a(href="#{item.href}") #{item.title}
   else
     li.dropdown
       a.dropdown-toggle(href="#",data-target="#",data-toggle="dropdown") #{item.title}
