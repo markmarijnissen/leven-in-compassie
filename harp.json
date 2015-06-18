@@ -5,7 +5,7 @@
 		"locatie_lindenberg":"https://www.google.com/maps/place/Lindenberg,+6511+Nijmegen,+Nederland/@51.8476196,5.8687992,17z/data=!4m2!3m1!1s0x47c70845eb78c809:0x7884dd13fa6ea0c3?hl=nl",
 		"menu":[
 			{
-				"title":"Leven in Compassie",
+				"title":"Home",
 				"href":"/"
 			},{
 				"title":"Agenda",
@@ -19,13 +19,8 @@
 					},{
 						"title":"---"
 					},{
-						"title":"Open Oefengroep",
-						"href":"/aanbod/oefengroep"
-					},{
-						"title":"---"
-					},{
-						"title":"1-op-1 Training",
-						"href":"/aanbod/1-op-1-training"
+						"title":"Persoonlijke Coaching",
+						"href":"/aanbod/persoonlijke-coaching"
 					},{
 						"title":"1-op-1 Compassie",
 						"href":"/aanbod/1-op-1-compassie"
@@ -38,27 +33,30 @@
 					},{
 						"title":"---"
 					},{
+						"title":"Open Oefengroep",
+						"href":"/aanbod/oefengroep"
+					},{
+						"title":"---"
+					},{
 						"title":"Tarieven",
 						"href":"/over/tarieven"
 					}
 				]
 			},{
-						"title":"Introductie",
-						"href":"/introNVC",
-						"blank": true
-					}
-			,{
-				"title":"Over",
-				"items":[
-					{
-						"title":"Mark Marijnissen",
-						"href":"/over/markmarijnissen"
-					},{
-						"title":"Contact",
-						"href":"/over/contact"
-					}
-				]
+				"title":"De Methode",
+				"href":"/info/geweldloze-communicatie"
+			},{
+				"title":"Reacties",
+				"href":"/reacties"
+			},
+			{
+				"title":"Mark Marijnissen",
+				"href":"/over/markmarijnissen"
+			},{
+				"title":"Contact",
+				"href":"/over/contact"
 			}
+				
 		]
 	}
 }

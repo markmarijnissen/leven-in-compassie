@@ -1,30 +1,23 @@
 {	
 	"index":{
-		"headerimg":"banner-stappen.jpg",
 		"title":"Aanbod"
 	},
 	"oefengroep":{
-		"headerimg":"banner-uitleg.jpg",
 		"title":"Open Oefengroep"
 	},
-	"1-op-1-training":{
-		"headerimg":"banner-twee.jpg",
-		"title":"1-op-1 Training"
+	"persoonlijke-coaching":{
+		"title":"Persoonlijke Coaching"
 	},
 	"1-op-1-compassie":{
-		"headerimg":"banner-twee.jpg",
 		"title":"1-op-1 Compassie"
 	},
 	"cursus":{
-		"headerimg":"banner-youbedo.jpg",
 		"title":"Ontdek de kracht van compassie"
 	},
 	"relatie-sessie":{
-		"headerimg":"banner-behoefte.jpg",
 		"title":"Relatie Sessie"
 	},
 	"voor-bedrijven":{
-		"headerimg":"banner-giraffe.jpg",
 		"title": "Voor bedrijven"
 	}
 }

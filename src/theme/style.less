@@ -2,6 +2,16 @@
 @import "./navbar.less";
 @import "./font/bariol.css";
 
+h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
+}
+h4 {
+	margin-bottom: 0px;
+}
+.align-top {
+	margin-top: 0;
+}
+
 .menu-btn {
 	cursor: pointer;
 	float: left;
@@ -11,6 +21,33 @@
 blockquote {
 	background-color: #EEEEEE;
 }
+
+blockquote.reactie {
+	font-style: italic;
+	margin: 0;
+}
+.reveal .reactie {
+	margin-top: 0;
+	width: 67%;
+	border: 1px solid darken(@body-bg,10%);
+	padding: 10px;
+	background-color: white;
+	float: left;
+	margin-left: 20px;
+}
+.reveal .reactie.right {
+	float: right;
+	margin-right: 20px;
+}
+
+.reactie-auteur {
+	text-align: right;
+	margin-bottom: 25px;
+}
+img.reactie {
+	//margin-bottom: 25px;
+}
+
 .title {
 	text-align: center;
 }
@@ -25,11 +62,29 @@ blockquote {
 }
 .reveal h2 {
 	margin: 0;
+	text-transform: uppercase;
 }
+.reveal .form {
+	margin: 15px 0;
+}
+.reveal .controls .navigate-left, .reveal .controls .navigate-right {
+	opacity: 0;
+}
+
 @btn-next-bg: @body-bg;
 @btn-next-color: @brand-primary;
+.dark-bg {
+	padding: 10px;
+	display: inline-block;
+	border-radius: 12px;
+	background-color: rgba(0,0,0,0.6);
+	//border: 1px solid white;
+	p {
+		color: white;
+	}
+}
 .btn-next {
-    background-color: @body-bg;
+    background-color: lighten(@body-bg,3%);
     color: @btn-next-color;
     border-radius: 12px;
     line-height: 35px;
@@ -41,7 +96,19 @@ blockquote {
     &:hover {
     	color: @btn-next-color;
     	background-color: lighten(@body-bg,5%);
+    	box-shadow: 0 0 10px darken(@body-bg,10%);
     }
+}
+.btn-next-dark {
+	.btn-next();
+	border: 1px solid white;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	&:hover {
+		color: white;
+		background-color: rgba(0,0,0,0.75);
+		box-shadow: none;
+	}
 }
 
 .headroom--not-top {

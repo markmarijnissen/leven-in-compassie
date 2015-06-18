@@ -1,55 +1,84 @@
+<% var next = "<p><a class=\"btn btn-next btn-lg navigate-down\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a></p>"; %>
 <section>
 	<section>
 		<div>
-			<img style="height: 200px;" src="/assets/leven-in-compassie-logo.png"></img>
+			<img style="height: 200px; position: relative; left: 5px;" src="/assets/leven-in-compassie-logo.png"></img>
 			<h1 class="home-title">Leven in Compassie</h1>
-			<p>gebaseerd op <a href="/artikelen/introductie">Geweldloze Communicatie</a><br/>
+			<p>
+				<span style="position: relative; left: 3px;">gebaseerd op <a href="/info/geweldloze-communicatie">Geweldloze Communicatie</a></span><br/>
 				door <a href="/over/markmarijnissen">Mark Marijnissen</a>
 			</p>
-			<p><a class="btn btn-next btn-lg navigate-down"><i class="glyphicon glyphicon-chevron-down"></i></a></p>
+			<%- next %>
 		</div>
-	</section>
-	<section
-		style="height: 480px;" 
-		data-background-transition="slide"
-		data-background="/assets/youbedo.jpg">
-		<p style="position: absolute; width: 100%; bottom: 0;">
-			<a class="btn btn-next btn-lg navigate-down"><i class="glyphicon glyphicon-chevron-down"></i></a>
-		</p>
 	</section>
 	<section>
-		<h2>Ontdek de kracht van compassie</h2>
 		<div class="row">
-			<div class="col-xs-4">
-				Verbinding
+			<div class="col-xs-6">
+				<img style="width: 200px;" src="/assets/mark.jpg"></img>
 			</div>
-			<div class="col-xs-4">
-				Inzicht &amp; Innerlijke Rust
-			</div>
-			<div class="col-xs-4">
-				Persoonlijke kracht
+			<div class="col-xs-6">
+				<h2 style="line-height: 1; margin-bottom: 20px;">"Het brengt mensen dichter bij elkaar"</h2>
+				<p>
+					Ik geef al jarenlang workshops gebaseerd op Geweldloze Communicatie.
+				</p>
+				<p>
+					Ik ben steeds weer onder de indruk hoe het inzicht geeft
+					in wat er écht leeft in mensen. 
+				<p><p>Het brengt mensen dichter bij elkaar.
+				</p>
 			</div>
 		</div>
-		<p><a class="btn btn-next btn-lg" href="#/0/2"><i class="glyphicon glyphicon-chevron-down"></i></a></p>
+		<%- next %>
 	</section>
-
+	<section style="font-size: 0.8em;">
+		<h2>Aanbod</h2>
+		<div class="row">
+			<div class="col-xs-4" style="height: 240px;">
+				<h2 style="font-size: 25px;">Compassie</h2>
+				<p>Voel je afstand of stress? Ga je door een moeilijke tijd?</p>
+				<p>Met <a href="/aanbod/1-op-1-compassie">1-op-1 compassie</a> of een <a href="/aanbod/relate-sessie">relatie sessie</a> geef ik inzicht, compassie en verbinding.</p>
+				<p style="position: absolute; bottom: 0; width: 200px"><a target="_blank" href="mailto:mark@levenincompassie.nl" class="btn btn-primary">Ontvang compassie</a></p>
+			</div>
+			<div class="col-xs-4" style="height: 240px; background: white;">
+				<h2 style="font-size: 25px;">Training</h2>
+				<p>Wil je meer compassie en verbinding met jezelf en anderen?</p>
+				<p>Met <a href="/aanbod/persoonlijke-coaching">persoonlijke coaching</a> leer ik je hoe je meer zelfcompassie, verbinding en persoonlijke kracht kunt vinden in je leven.</p>
+				<p style="position: absolute; bottom: 0; width: 200px"><a target="_blank" href="mailto:mark@levenincompassie.nl" class="btn btn-primary">Krijg training</a></p>
+			</div>
+			<div class="col-xs-4" style="height: 240px;">
+				<h2 style="font-size: 25px;">Voor bedrijven</h2>
+				<p>Leer empathisch te luisteren, verbinden en conflicten op te lossen met een workshop.</p>
+				<p>Herstel harmonie op de werkvloer met conflict-bemiddeling.</p>
+				<p style="position: absolute; bottom: 0; width: 200px"><a href="/aanbod/voor-bedrijven" class="btn btn-primary">Boek nu</a></p>
+			</div>
+		</div>
+		<hr style="margin: 10px 0;"/>
+		<p>Wil je kennismaken met de methode? <br/>Kom eens langs op een <a href="/aanbod/oefengroep">open oefengroep</a>.</p>
+		<%- next %>
+		
+	</section>
 	<section>
 		<h2>Reacties van anderen</h2>
-		<blockquote class="text-left">"Zo gaat ie goed"</blockquote>
-		<q class="text-right">echt wel</q>
+		<blockquote class="reactie text-left">
+			"Ik was verrast over hoeveel Mark ons in korte tijd heeft geholpen. (...) 
+			Zijn manier van werken heeft echt gezorgd voor verbinding."
+		</blockquote>
+		<blockquote class="reactie text-left right">
+			"Ik ga al maanden naar de psycholoog, maar ik vind het moeilijk tot de kern te komen. Dat is met met jou in één middag gelukt!" 
+		</blockquote>
+		<blockquote class="reactie text-left">
+			"Ik vind het ontzettend bijzonder om te merken wat het voor deurtjes 
+	opent in het contact met anderen."
+		</blockquote>
+		<div class="clearfix"></div>
+		<%- next %>
 	</section>			
 	<section>
 		<h2>Ervaar het zelf</h2>
-		<p>Ik wil dolgraag bijdragen aan verbinding, inzicht, compassie en persoonlijke kracht.<br/>
-		Het liefst door te <strong>doen</strong> in plaats van erover te vertellen. <br/>
-		Dat geeft mij voldoening, verbinding en vertrouwen.</p>
-		<p>Ontvang <a href="/aanbod/1-op-1-compassie">zelf-compassie</a><br/>
-			of <a href="/aanbod/1-op-1-training">training</a> in een privé les.
-		</p>
-		<p>Creeër verbinding in <a href="/aanbod/relatie-sessie">je relatie</a><br/>
-			of op <a href="/aanbod/voor-bedrijven">de werkvloer</a>
-		</p>
-		<p>Of meld je aan voor de <a href="/aanbod/oefengroep">Open Oefengroep</a>. <br/>Ik stuur je per e-mail een uitnodiging.</p>
+		<p>Met woorden kan ik je niet de kracht van compassie laten zien.<br/>
+		Het liefst laat ik je de verbinding, inzicht en warmte zélf ervaren.</p>
+
+		<p>Kom je naar de <a href="/aanbod/oefengroep">Open Oefengroep</a>? <br/>Ik verstuur per e-mail een uitnodiging.</p>
 		<p class="text-center">
 			<form style="width: 400px; display: inline-block;" class="form" action="https://tinyletter.com/nvcnijmegen" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/nvcnijmegen', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 					<div class="input-group">
@@ -62,16 +91,6 @@
 					<input type="hidden" value="pa5pb4asa1da33wpc6cbe90qiqe01aeex6" name="anti-captcha-token">
 			</form>
 		</p>
+		<p>Of kijk nog eens naar <a href="/aanbod">het aanbod</a>.
 	</section>
 </section>
-
-<section>
-		<div>
-			<img style="height: 200px;" src="/assets/mark-cirkel.png"></img>
-			<h1 class="home-title">Leven in Compassie</h1>
-			<p>gebaseerd op <a href="/artikelen/introductie">Geweldloze Communicatie</a><br/>
-				door <a href="/over/markmarijnissen">Mark Marijnissen</a>
-			</p>
-			<p><a class="btn btn-next btn-lg navigate-down"><i class="glyphicon glyphicon-chevron-down"></i></a></p>
-		</div>
-	</section>

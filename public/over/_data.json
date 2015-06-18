@@ -1,13 +1,13 @@
 {
 	"markmarijnissen":{
 		"format":"row",
-		"headerimg":"banner-jakhals.jpg",
 		"title":"Mark Marijnissen"
 	},
 	"tarieven":{
 		"title":"Tarieven"
 	},
 	"contact":{
-		"title":"Contact"
+		"title":"Contact",
+		"format":"row"
 	}
 }

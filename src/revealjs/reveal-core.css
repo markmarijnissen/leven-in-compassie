@@ -885,7 +885,7 @@ body {
   -webkit-perspective: 700px;
           perspective: 700px; }
   .reveal.overview .slides section {
-    height: 700px;
+    height: 480px;
     opacity: 1 !important;
     overflow: hidden;
     visibility: visible !important;

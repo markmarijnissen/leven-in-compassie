@@ -1,13 +1,37 @@
-<p>Voor vragen en informatie kun je me bereiken op <strong>mark@levenincompassie.nl</strong>.</p>
-<div class="well">
-<strong>Locatie Activiteiten:</strong><br/>
-<a href="<%= locatie_lindenberg %>" target="_blank">De Lindenberg</a>,<br/>
-Ridderstraat 27-29 (<a href="<%= locatie_blauwe_deur %>" target="_blank">Streetview</a>)<br/>
-Nijmegen. </div>
+<h1 class="text-center">Contact</h1>
+<div class="col-sm-8 col-md-7 col-md-offset-1">
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-2">
+			<h3 class="align-top">Stuur een E-mail</h3>
+		</div>
+	</div>
+	<%- include ../_email.ejs %>
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-2">	
+			<hr/>
+			<h3>Maak een bel afspraak</h3>
+			<%- include ../_callmeback.ejs %>
+			
+			<hr/>
+			<h3>Kom op bezoek</h3>
+			Je bent van harte welkom om langs te komen voor een kop koffie:
+			<br/>
+			<br/>
+			<strong>Cursus Locatie / Bezoek locatie:</strong><br/>
+			<a href="<%= locatie_lindenberg %>" target="_blank">De Lindenberg</a><br/>
+			Ridderstraat 29<br/>
+			Nijmegen 
+			<br/>
+			<br/>
+			<strong>Postadres:</strong><br/>
+			Wolfstraat 180<br/>
+			6531LR Nijmegen<br/>
+			KvK: 50210041
 
-<div class="well">
-	<strong>Leven in Compassie</strong><br/>
-	Wolfstraat 180<br/>
-	6531LR Nijmegen<br/>
-	KvK: 50210041
+		</div>
+	</div>
+
+</div>
+<div class="col-sm-3 hidden-xs">
+	<img src="/assets/mark.jpg" style="width: 100%;"></img>
 </div>
