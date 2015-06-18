@@ -13,7 +13,12 @@
 
 /* elements */
 blockquote {
-	background-color: #EEEEEE;
+	//background-color: #EEEEEE;
+	border-left-style: none;
+	.chat-bubble();
+}
+blockquote::after {
+	.chat-bubble-after();
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,6 +29,7 @@ h4 {
 }
 
 blockquote.reactie {
+	background-color: white;
 	box-shadow: 2px 2px 0 #EBEBEB;
 	font-style: italic;
 	margin: 0 0 30px 0;
@@ -37,7 +43,10 @@ blockquote.reactie {
 }
 
 .reactie-auteur {
-	text-align: right;
+	text-align: left;
+	margin-left: 50px;
+	position: relative;
+	top: -8px;
 	margin-bottom: 25px;
 }
 img.reactie {

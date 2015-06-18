@@ -6,7 +6,9 @@ ul.nav.nav-pills: each item in menu
       li: a(href="#{item.href}") #{item.title}
   else
     li.dropdown
-      a.dropdown-toggle(href="#",data-target="#",data-toggle="dropdown") #{item.title}
+      a.dropdown-toggle(href="#",data-target="#",data-toggle="dropdown") 
+        | #{item.title}
+        span.caret(style="line-height: 10px;")
       ul.dropdown-menu
         each subitem in item.items
           if subitem.title === '---'
