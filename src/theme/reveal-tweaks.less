@@ -1,0 +1,58 @@
+.reveal h2 {
+	margin: 0;
+	text-transform: uppercase;
+}
+.reveal .form {
+	margin: 15px 0;
+}
+.reveal .controls .navigate-left, .reveal .controls .navigate-right {
+	opacity: 0;
+}
+
+.reveal .reactie {
+	margin-top: 0;
+	width: 67%;
+	border: 1px solid darken(@body-bg,10%);
+	border-style: solid solid none;
+	padding: 10px;
+	background-color: white;
+	float: left;
+	margin-left: 20px;
+}
+.reveal .reactie.right {
+	float: right;
+	margin-right: 20px;
+}
+
+blockquote.reactie::after {
+	.chat-bubble-after();
+}
+
+/* NO REVEAL */
+.noreveal {
+	section {
+	  text-align: center;
+	}	
+
+	.nr-left {
+		text-align: left;
+	}
+
+	blockquote.reactie {
+		background-color: white;
+		clear: both;
+		float: left;
+		width: 80%;
+	}
+
+	.reactie.right {
+		float: right;
+	}
+
+	.mark-marijnissen {
+		margin-top: 0px;
+	}
+
+
+}
+

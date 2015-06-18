@@ -16,7 +16,7 @@ html
     script(type='text/javascript', src='/main-bundle.js')      
     if revealjs
       script(src="/reveal-bundle.js")
-  body#wrapper
+  body(class="#{ revealjs? '':'noreveal'}")#wrapper
     #navbar
       != partial('_partials/navbar')
     if headerimg

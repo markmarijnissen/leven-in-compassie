@@ -1,23 +1,29 @@
 <% var next = "<p><a class=\"btn btn-next btn-lg navigate-down\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a></p>"; %>
+<% var cols = "col-md-6 col-md-offset-3 col-xs-12 col-sm-10 col-sm-offset-1"; %>
+<% var slide_start = revealjs? "<section>": "<div class=\"row\"><section class=\""+cols+"\">"; %>
+<% var slide_end = revealjs? "</section>": "</section></div>"; %>
 <section>
-	<section>
-		<div>
-			<img style="height: 200px; position: relative; left: 5px;" src="/assets/leven-in-compassie-logo.png"></img>
-			<h1 class="home-title">Leven in Compassie</h1>
-			<p>
-				<span style="position: relative; left: 3px;">gebaseerd op <a href="/info/geweldloze-communicatie">Geweldloze Communicatie</a></span><br/>
-				door <a href="/over/markmarijnissen">Mark Marijnissen</a>
-			</p>
-			<%- next %>
-		</div>
-	</section>
-	<section>
+<%- slide_start %>
+	<img style="height: <%= revealjs? 200: 300 %>px; position: relative; left: 5px; margin-top: 20px;" src="/assets/leven-in-compassie-logo.png"></img>
+	<h1 class="home-title">Leven in Compassie</h1>
+	<p>
+		<span style="position: relative; left: 3px;">gebaseerd op <a href="/info/geweldloze-communicatie">Geweldloze Communicatie</a></span><br/>
+		door <a href="/over/markmarijnissen">Mark Marijnissen</a>
+	</p>
+	<%- next %>
+<%- slide_end %>
+<%- slide_start %>
+		<% if(!revealjs){%>
+			<h2 class="mark-marijnissen-quote">"Het brengt mensen dichter bij elkaar"</h2>
+		<% } %>
 		<div class="row">
-			<div class="col-xs-6">
-				<img style="width: 200px;" src="/assets/mark.jpg"></img>
+			<div class="col-xs-6 text-right">
+				<img class="mark-marijnissen" style="width: 200px;" src="/assets/mark.jpg"></img>
 			</div>
-			<div class="col-xs-6">
-				<h2 style="line-height: 1; margin-bottom: 20px;">"Het brengt mensen dichter bij elkaar"</h2>
+			<div class="col-xs-6 nr-left">
+				<% if(revealjs){%>
+					<h2 style="line-height: 1; margin-bottom: 20px;">"Het brengt mensen dichter bij elkaar"</h2>
+				<% } %>
 				<p>
 					Ik geef al jarenlang workshops gebaseerd op Geweldloze Communicatie.
 				</p>
@@ -29,35 +35,63 @@
 			</div>
 		</div>
 		<%- next %>
-	</section>
-	<section style="font-size: 0.8em;">
+<%- slide_end %>
+<% if(revealjs) { %>
+<section>
+<% } else { %>
+<div class="row">
+	<section class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+<% } %>
 		<h2>Aanbod</h2>
-		<div class="row">
-			<div class="col-xs-4" style="height: 240px;">
-				<h2 style="font-size: 25px;">Compassie</h2>
-				<p>Voel je afstand of stress? Ga je door een moeilijke tijd?</p>
-				<p>Met <a href="/aanbod/1-op-1-compassie">1-op-1 compassie</a> of een <a href="/aanbod/relate-sessie">relatie sessie</a> geef ik inzicht, compassie en verbinding.</p>
-				<p style="position: absolute; bottom: 0; width: 200px"><a target="_blank" href="mailto:mark@levenincompassie.nl" class="btn btn-primary">Ontvang compassie</a></p>
-			</div>
-			<div class="col-xs-4" style="height: 240px; background: white;">
-				<h2 style="font-size: 25px;">Training</h2>
-				<p>Wil je meer compassie en verbinding met jezelf en anderen?</p>
-				<p>Met <a href="/aanbod/persoonlijke-coaching">persoonlijke coaching</a> leer ik je hoe je meer zelfcompassie, verbinding en persoonlijke kracht kunt vinden in je leven.</p>
-				<p style="position: absolute; bottom: 0; width: 200px"><a target="_blank" href="mailto:mark@levenincompassie.nl" class="btn btn-primary">Krijg training</a></p>
-			</div>
-			<div class="col-xs-4" style="height: 240px;">
-				<h2 style="font-size: 25px;">Voor bedrijven</h2>
-				<p>Leer empathisch te luisteren, verbinden en conflicten op te lossen met een workshop.</p>
-				<p>Herstel harmonie op de werkvloer met conflict-bemiddeling.</p>
-				<p style="position: absolute; bottom: 0; width: 200px"><a href="/aanbod/voor-bedrijven" class="btn btn-primary">Boek nu</a></p>
-			</div>
-		</div>
-		<hr style="margin: 10px 0;"/>
+ 		<div class="row">
+ 			<div class="col-xs-4">
+ 				<h2>Compassie</h2>
+ 			</div>
+ 			<div class="col-xs-4 highlight">
+ 				<h2>Training</h2>
+ 			</div>
+ 			<div class="col-xs-4">
+ 				<h2>Zakelijk</h2>
+ 			</div>
+ 		</div>
+ 		<div class="row">
+ 			<div class="col-xs-4 ">
+ 				<p>Voel je afstand of stress? Ga je door een moeilijke tijd?</p>
+ 			</div>
+ 			<div class="col-xs-4  highlight">
+ 				<p>Wil je meer compassie en verbinding met jezelf en anderen?</p>
+ 			</div>
+ 			<div class="col-xs-4 ">
+ 				<p>Workshops voor o.a. empathisch luisteren en omgaan met conflict.</p>
+ 			</div>
+ 		</div>
+ 		<div class="row">
+ 			<div class="col-xs-4 ">
+ 				<p>Met <a href="/aanbod/1-op-1-compassie">1-op-1 compassie</a> of een <a href="/aanbod/relate-sessie">relatie sessie</a> geef ik opluchting, inzicht en compassie.
+ 			</div>
+ 			<div class="col-xs-4  highlight">
+ 				<p>Met <a href="/aanbod/persoonlijke-coaching">persoonlijke coaching</a> leer je zelf verbinding, zelf-compassie en kracht te scheppen.</p>
+ 			</div>
+ 			<div class="col-xs-4 ">
+ 				<p>Herstel harmonie op de werkvloer met conflict-bemiddeling.</p>
+ 			</div>
+ 		</div>
+ 		<div class="row">
+ 			<div class="col-xs-4">
+ 				<p><a href="/aanbod/1-op-1-compassie" class="btn btn-primary">Ontvang compassie</a></p>
+ 			</div>
+ 			<div class="col-xs-4 highlight">
+ 				<p><a href="/aanbod/persoonlijke-coaching" class="btn btn-primary">Leer verbinden</a></p>
+ 			</div>
+ 			<div class="col-xs-4">
+ 				<p><a href="/aanbod/voor-bedrijven" class="btn btn-primary">Boek nu</a></p>
+ 			</div>
+ 		</div>
+ 		<hr style="margin: 10px 0;"/>
 		<p>Wil je kennismaken met de methode? <br/>Kom eens langs op een <a href="/aanbod/oefengroep">open oefengroep</a>.</p>
 		<%- next %>
-		
-	</section>
-	<section>
+<%- slide_end %>
+<%- slide_start %>
 		<h2>Reacties van anderen</h2>
 		<blockquote class="reactie text-left">
 			"Ik was verrast over hoeveel Mark ons in korte tijd heeft geholpen. (...) 
@@ -72,8 +106,8 @@
 		</blockquote>
 		<div class="clearfix"></div>
 		<%- next %>
-	</section>			
-	<section>
+<%- slide_end %>
+<%- slide_start %>
 		<h2>Ervaar het zelf</h2>
 		<p>Met woorden kan ik je niet de kracht van compassie laten zien.<br/>
 		Het liefst laat ik je de verbinding, inzicht en warmte zélf ervaren.</p>
@@ -91,6 +125,8 @@
 					<input type="hidden" value="pa5pb4asa1da33wpc6cbe90qiqe01aeex6" name="anti-captcha-token">
 			</form>
 		</p>
-		<p>Of kijk nog eens naar <a href="/aanbod">het aanbod</a>.
-	</section>
+		<p>Of bel me op voor een kennismaking:
+		<%- partial('_callmeback.ejs') %>
+		</p>
+<%- slide_end %>
 </section>

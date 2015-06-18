@@ -2,7 +2,8 @@
 	"index":{
 		"hide_title":true,
 		"title":"Leven in Compassie",
-		"revealjs":true
+		"revealjs":false,
+		"format":"container"
 	},
 	"agenda":{
 		"format":"row",
