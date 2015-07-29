@@ -6,7 +6,6 @@
 		"format":"container"
 	},
 	"agenda":{
-		"format":"row",
 		"title":"Agenda"
 	},
 	"reacties":{

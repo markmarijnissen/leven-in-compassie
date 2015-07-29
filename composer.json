@@ -1,0 +1,21 @@
+{
+    "name": "markmarijnissen/levenincompassie",
+    "description": "Leven in Compassie website",
+    "require": {
+        "mollie/mollie-api-php": "^1.2",
+        "mailgun/mailgun-php": "~1.8",
+        "ktamas77/firebase-php": "dev-master",
+        "mikecao/flight": "^1.2",
+        "mustache/mustache": "^2.8"
+    },
+    "config":{
+        "vendor-dir":"api/vendor"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Marijnissen",
+            "email": "markmarijnissen@gmail.com"
+        }
+    ]
+}

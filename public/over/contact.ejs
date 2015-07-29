@@ -3,14 +3,15 @@
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-2">
 			<h3 class="align-top">Stuur een E-mail</h3>
+			<p>Naar <strong>&#109;&#097;&#114;&#107;&#064;&#108;&#101;&#118;&#101;&#110;&#105;&#110;&#099;&#111;&#109;&#112;&#097;&#115;&#115;&#105;&#101;&#046;&#110;&#108;</strong></p>
 		</div>
 	</div>
 	<%- include ../_email.ejs %>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-2">	
 			<hr/>
-			<h3>Maak een bel afspraak</h3>
-			<%- include ../_callmeback.ejs %>
+			<h3>Maak een bel afspraak</h3> 
+			<%- partial('../_callmeback.ejs',{no_inline: true}) %>
 			
 			<hr/>
 			<h3>Kom op bezoek</h3>
@@ -26,7 +27,8 @@
 			<strong>Postadres:</strong><br/>
 			Wolfstraat 180<br/>
 			6531LR Nijmegen<br/>
-			KvK: 50210041
+			KvK: 50210041<br/>
+			BTW: NL012167071B01
 
 		</div>
 	</div>

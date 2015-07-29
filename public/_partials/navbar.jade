@@ -1,4 +1,4 @@
-ul.nav.nav-pills: each item in menu
+ul.nav.nav-pills.hidden-xs: each item in menu
   if item.href
     if item.blank
       li: a(href="#{item.href}",target="_blank") #{item.title}
@@ -17,3 +17,15 @@ ul.nav.nav-pills: each item in menu
             li: a(href="#{subitem.href}",target="_blank") #{subitem.title}
           else
             li: a(href="#{subitem.href}") #{subitem.title}
+form.form-inline.visible-xs
+  .input-group
+    span.input-group-addon.no-bg Menu:
+    select#navselect.form-control
+      each item in menu
+        if item.href
+          option(value="#{item.href}") #{item.title}
+        else 
+          optgroup(label="#{item.title}")
+            each subitem in item.items
+              if subitem.title !== '---'
+                option(value="#{subitem.href}") #{subitem.title}

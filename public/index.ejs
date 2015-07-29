@@ -13,27 +13,23 @@
 	<%- next %>
 <%- slide_end %>
 <%- slide_start %>
+		<% var quote = "Compassie werkt ontwapenend - het laat zien hoe mensen mooi zijn en dat schept verbinding" %>
 		<% if(!revealjs){%>
-			<h2 class="mark-marijnissen-quote">"Het brengt mensen dichter bij elkaar"</h2>
+			<h2 class="mark-marijnissen-quote">"<%- quote %>"</h2>
 		<% } %>
 		<div class="row">
 			<div class="col-xs-6 text-right">
-				<img class="mark-marijnissen" style="width: 200px;" src="/assets/mark.jpg"></img>
+				<img class="mark-marijnissen" style="width: 100%;" src="/assets/mark.jpg"></img>
 			</div>
 			<div class="col-xs-6 nr-left">
 				<% if(revealjs){%>
-					<h2 style="line-height: 1; margin-bottom: 20px;">"Het brengt mensen dichter bij elkaar"</h2>
+					<h2 style="line-height: 1; margin-bottom: 20px;">""<%- quote %>""</h2>
 				<% } %>
-				<p>
-					Ik geef al jarenlang workshops gebaseerd op Geweldloze Communicatie.
-				</p>
-				<p>
-					Ik ben steeds weer onder de indruk hoe deze methode veiligheid biedt om 
-					mensen open en kwetsbaar te laten zijn. 
-				<p>
-				<p>
-					Ik geniet van de verbinding, zelf-compassie en inzicht dat daarvan komt.
-				</p>
+				<p>Ik ben Mark Marijnissen. Ik geef sinds 2013 workshops gebaseerd op Geweldloze Communicatie.</p>
+				<p>Door Geweldloze Communicatie heb ik geleerd open en kwetsbaar te zijn. Ik heb meer inzicht in wat ik voel en nodig heb. Ik voel me meer verbonden met de mensen om mij heen. Daar geniet ik zo van, dat ik er mijn werk van heb gemaakt: Ik leef met compassie.</p>
+				<p>Mijn missie is jou dat ook te leren. Ik wil jou ook laten genieten van zelfcompassie, verbinding en inzicht.</p>
+				<p>Ik ontmoet je graag!</p>
+				<p class="text-right">-Mark</p>
 			</div>
 		</div>
 		<%- next %>
@@ -43,50 +39,85 @@
 <% } else { %>
 <div class="row">
 	<section class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-<% } %>
+<% } %>	
+		<%
+		var aanbod = [
+			{
+				"title":"Compassie",
+				"pain":"Voel je afstand of stress? Ga je door een moeilijke tijd?",
+				"solution":"Met <a href=\"/aanbod/1-op-1-compassie\">1-op-1 compassie</a> of een <a href=\"/aanbod/relate-sessie\">relatie sessie</a> geef ik opluchting, inzicht en compassie.",
+				"cta":"Ontvang compassie",
+				"href":"/aanbod/1-op-1-compassie"
+			},{
+				"title":"Training",
+				"pain":"Wil je meer compassie en verbinding met jezelf en anderen?",
+				"solution":"Met <a href=\"/aanbod/persoonlijke-coaching\">persoonlijke coaching</a> leer je zelf verbinding, zelf-compassie en kracht te scheppen.",
+				"cta":"Leer verbinden",
+				"href":"/aanbod/persoonlijke-coaching"					
+			},{
+				"title":"Zakelijk",
+				"pain":"Workshops voor o.a. empathisch luisteren en omgaan met conflict.",
+				"solution":"Herstel harmonie op de werkvloer met conflict-bemiddeling.",
+				"cta":"Boek nu",
+				"href":"/aanbod/voor-bedrijven"
+			}
+		]
+		%>
 		<h2>Aanbod</h2>
  		<div class="row">
- 			<div class="col-xs-4">
- 				<h2>Compassie</h2>
+ 			<div class="col-sm-4">
+ 				<h2><%- aanbod[0].title %></h2>
+ 				<div class="visible-xs">
+ 					<p><%- aanbod[0].pain %> <%- aanbod[0].solution %></p>
+ 					<p><a class="btn btn-primary" href="<%- aanbod[0].href %>"><%- aanbod[0].cta %></a></p>
+ 				</div>
  			</div>
- 			<div class="col-xs-4 highlight">
- 				<h2>Training</h2>
+ 			<div class="col-sm-4 highlight">
+ 				<h2><%- aanbod[1].title %></h2>
+ 				<div class="visible-xs">
+ 					<p><%- aanbod[1].pain %> <%- aanbod[1].solution %></p>
+ 					<p><a class="btn btn-primary" href="<%- aanbod[1].href %>"><%- aanbod[1].cta %></a></p>
+ 				</div>
  			</div>
- 			<div class="col-xs-4">
- 				<h2>Zakelijk</h2>
- 			</div>
- 		</div>
- 		<div class="row">
- 			<div class="col-xs-4 ">
- 				<p>Voel je afstand of stress? Ga je door een moeilijke tijd?</p>
- 			</div>
- 			<div class="col-xs-4  highlight">
- 				<p>Wil je meer compassie en verbinding met jezelf en anderen?</p>
- 			</div>
- 			<div class="col-xs-4 ">
- 				<p>Workshops voor o.a. empathisch luisteren en omgaan met conflict.</p>
- 			</div>
- 		</div>
- 		<div class="row">
- 			<div class="col-xs-4 ">
- 				<p>Met <a href="/aanbod/1-op-1-compassie">1-op-1 compassie</a> of een <a href="/aanbod/relate-sessie">relatie sessie</a> geef ik opluchting, inzicht en compassie.
- 			</div>
- 			<div class="col-xs-4  highlight">
- 				<p>Met <a href="/aanbod/persoonlijke-coaching">persoonlijke coaching</a> leer je zelf verbinding, zelf-compassie en kracht te scheppen.</p>
- 			</div>
- 			<div class="col-xs-4 ">
- 				<p>Herstel harmonie op de werkvloer met conflict-bemiddeling.</p>
+ 			<div class="col-sm-4">
+ 				<h2><%- aanbod[2].title %></h2>
+ 				<div class="visible-xs">
+ 					<p><%- aanbod[2].pain %> <%- aanbod[2].solution %></p>
+ 					<p><a class="btn btn-primary" href="<%- aanbod[2].href %>"><%- aanbod[2].cta %></a></p>
+ 				</div>
  			</div>
  		</div>
- 		<div class="row">
- 			<div class="col-xs-4">
- 				<p><a href="/aanbod/1-op-1-compassie" class="btn btn-primary">Ontvang compassie</a></p>
+ 		<div class="row hidden-xs">
+ 			<div class="col-sm-4 ">
+ 				<p><%- aanbod[0].pain %></p>
  			</div>
- 			<div class="col-xs-4 highlight">
- 				<p><a href="/aanbod/persoonlijke-coaching" class="btn btn-primary">Leer verbinden</a></p>
+ 			<div class="col-sm-4  highlight">
+ 				<p><%- aanbod[1].pain %></p>
  			</div>
- 			<div class="col-xs-4">
- 				<p><a href="/aanbod/voor-bedrijven" class="btn btn-primary">Boek nu</a></p>
+ 			<div class="col-sm-4 ">
+ 				<p><%- aanbod[2].pain %></p>
+ 			</div>
+ 		</div>
+ 		<div class="row hidden-xs">
+ 			<div class="col-sm-4 ">
+ 				<p><%- aanbod[0].solution %></p>
+ 			</div>
+ 			<div class="col-sm-4  highlight">
+ 				<p><%- aanbod[1].solution %></p>
+ 			</div>
+ 			<div class="col-sm-4 ">
+ 				<p><%- aanbod[2].solution %></p>
+ 			</div>
+ 		</div>
+ 		<div class="row hidden-xs">
+ 			<div class="col-sm-4">
+ 				<p><a href="<%- aanbod[0].href %>" class="btn btn-primary"><%- aanbod[0].cta %></a></p>
+ 			</div>
+ 			<div class="col-sm-4 highlight">
+ 				<p><a href="<%- aanbod[1].href %>" class="btn btn-primary"><%- aanbod[1].cta %></a></p>
+ 			</div>
+ 			<div class="col-sm-4">
+ 				<p><a href="<%- aanbod[2].href %>" class="btn btn-primary"><%- aanbod[2].cta %></a></p>
  			</div>
  		</div>
  		<hr style="margin: 10px 0;"/>
@@ -111,24 +142,11 @@
 <%- slide_end %>
 <%- slide_start %>
 		<h2>Ervaar het zelf</h2>
-		<p>Met woorden kan ik je niet de kracht van compassie laten zien.<br/>
+		<p>Met alleen woorden kan ik je de kracht van compassie niet laten voelen.<br/>
 		Het liefst laat ik je de verbinding, inzicht en warmte zélf ervaren.</p>
 
-		<p>Kom je naar de <a href="/aanbod/oefengroep">Open Oefengroep</a>? <br/>Ik verstuur per e-mail een uitnodiging.</p>
-		<p class="text-center">
-			<form style="width: 400px; display: inline-block;" class="form" action="https://tinyletter.com/nvcnijmegen" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/nvcnijmegen', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="e-mail" name="email" id="tlemail">
-						<span class="input-group-btn">
-						<input type="submit" value="Aanmelden" class="btn btn-primary">
-						</span>
-					</div>
-					<input type="hidden" value="1" name="embed">
-					<input type="hidden" value="pa5pb4asa1da33wpc6cbe90qiqe01aeex6" name="anti-captcha-token">
-			</form>
-		</p>
-		<p>Of bel me op voor een kennismaking:
-		<%- partial('_callmeback.ejs') %>
+		<p class="text-center"><strong>Ontvang een uitnodiging voor de volgende activiteit:</strong>
+		<%- partial('_newsletter.ejs') %>
 		</p>
 <%- slide_end %>
 </section>
