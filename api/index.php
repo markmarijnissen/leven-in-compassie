@@ -33,6 +33,7 @@ Flight::route('GET /products',function(){
     $products = json_decode($firebase->get(FIREBASE_PATH . "/products"),true);
     foreach($products as &$product){
         $product['participants'] = count($product['participants']);
+        $product['payment']['discount'] = calculateDiscount($product);
     }
     Flight::json($products);
 });
@@ -50,21 +51,14 @@ Flight::route('POST /pay',function(){
 
     $product = $firebase->get(FIREBASE_PATH . "/products/".$order['product']);
     if($product == "null"){
-        Flight::json(['error'=>'product_not_found','data'=>$molliePaymentInfo],404);
+        Flight::json(['error'=>'product_not_found','data'=>$order],404);
         return;
     }
     $product = json_decode($product,true);
     $molliePaymentInfo = $product['payment'];
 
     // Calculate Discount
-    if(isset($product['discount']['first'])){
-        $n = count($product['participants']);
-        $discount = 0;
-        foreach($product['discount']['first'] as $max => $value){
-            if($n < $max && $discount < $value) $discount = $value;
-        }
-        $molliePaymentInfo['amount'] -= $discount;
-    }
+    $molliePaymentInfo['amount'] -= calculateDiscount($product);
 
     $molliePaymentInfo = $molliePaymentInfo + [
         "method"       => Mollie_API_Object_Method::IDEAL,
@@ -100,12 +94,19 @@ Flight::route('POST /webhook', function () {
     $firebase->push(FIREBASE_PATH . '/webhook',$payment);
 });
 
+Flight::route('POST /webhook-test',function(){
+    $order = json_decode(Flight::request()->getBody());
+    $id = hash_hmac("md5",$order->email,HASH_SECRET);
+    $order->id = $id;
+    webhook('paid',$order->product . '(test)',$order);
+});
+
 Flight::route('*', function(){
     Flight::json(['error'=>'not_found'],404);
 });
 
 Flight::map('error',function(\Exception $e){
-    Flight::json(['error'=>$e->getMessage()],500);
+    Flight::json(['error'=>$e->getMessage(),'stack'=>$e->getTraceAsString()],500);
 });
 
 Flight::map('validate',function($fields){
@@ -129,12 +130,16 @@ Flight::map('uuid',function(){
     );
 });
 
-Flight::route('POST /webhook-test',function(){
-    $order = json_decode(Flight::request()->getBody());
-    $id = hash_hmac("md5",$order->email,HASH_SECRET);
-    $order->id = $id;
-    webhook('paid',$order->product,$order);
-});
+function calculateDiscount($product){
+    $discount = 0;
+    if(isset($product['discount']['first'])){
+        $n = count($product['participants']);
+        foreach($product['discount']['first'] as $max => $value){
+            if($n < $max && $discount < $value) $discount = $value;
+        }
+    }
+    return $discount;
+}
 
 function webhook($status,$description,$data){
     global $firebase, $mailgun;
