@@ -24,6 +24,7 @@
     },
     "bedankt":{
     	"hide_title":true,
-        "title":"Bedankt"
+        "title":"Bedankt",
+        "format":"nothing"
     }
 }

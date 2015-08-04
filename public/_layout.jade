@@ -30,6 +30,8 @@ html
       .reveal
         .slides
           != yield
+    else if format === 'nothing'
+      != yield
     else  
       #layout.container
         if format === 'container'

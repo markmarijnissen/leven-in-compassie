@@ -89,7 +89,7 @@ Order.prototype._exec = function Exec(method,action,data){
         url: this.url.replace('[ACTION]',action),
         method: method,
         dataType: 'json'
-    }
+    };
     if(method === 'POST'){
         opts.data = JSON.stringify(data);
         opts.contentType = 'application/json; charset=utf-8';
@@ -101,8 +101,28 @@ Order.prototype._exec = function Exec(method,action,data){
 Order.prototype.getStatus = function(){
     this._exec('GET','status/'+queryparams.ref)
         .done(function(result){
-            if(result.status === 'paid'){
+            if(result.status === 'paid' || queryparams.success === 'true'){
                 $('.success').show();
+
+                var widget = {
+                    ref: queryparams.ref,
+                    color: 'cf4c6a',
+                    name: 'Leven in Compassie',
+                    widget_id: 'levenincompassie-xlcvDG9a9r7TtNU5qPKHRZ2fPOPREv',
+                    value: 1,
+                    done: 'hide',
+                    selector: '.widget',
+                    fullview: true,
+                    transparent: true,
+                    text: JSON.stringify({
+                        title: 'Leven in Compassie doneert {value} euro van je betaling aan een goed doel. Wat voor goeds wil je doen?'
+                    })
+                };
+                var src = '//ybdn-app.youbedo.com/widget-embed/embed.js?' + queryparams.create(widget);
+                if(ENV === 'dev') src = '//localhost:8080/widget-embed/embed.js?' + queryparams.create(widget);
+                var script = document.createElement('SCRIPT');
+                script.setAttribute('src',src);
+                document.head.appendChild(script);
             } else {
                 $('.error').show();
             }

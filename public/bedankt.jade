@@ -1,15 +1,26 @@
-div.success(style="display: none;")
-	h3 Je bent aangemeld!
-	.alert.alert-success
-		| Je ontvangt een e-mail met alle informatie.
-	div
-		strong Ontvang een uitnodiging voor de volgende activiteit
-		p Ontvang 1x per maand een uitnodiging voor de oefengroep en andere activiteiten.
-		!= partial("_newsletter.ejs")
+.container
+	.row
+		.col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1
+			div.success(style="display: none;")
+				h3.text-center Betaling is gelukt!
+				.ybdn-widget-done(style="display: none;")
+					.alert.alert-success
+						strong Je bent nu aangemeld!
+						p Je ontvangt een e-mail met alle informatie. 
+					.well
+						p Ontvang 1x per maand een uitnodiging voor de oefengroep en andere activiteiten.
+						!= partial("_newsletter.ejs")
+						
 
-div.error(style="display: none;")
-	h3 Betaling is mislukt.
-	.alert.alert-danger
-		| De betaling is niet gelukt.
-	p Probeer het nogmaals, of neem contact met mij op:
-	!= partial("_email.ejs")
+			div.error(style="display: none;")
+				h3 Betaling is mislukt.
+				.alert.alert-danger
+					| De betaling is niet gelukt.
+				p Probeer het nogmaals, of neem contact met mij op:
+				!= partial("_email.ejs")
+
+.container-fluid.success(style="padding: 0; display: none;")
+	.row
+		.col-xs-12.text-center
+			.widget
+			
