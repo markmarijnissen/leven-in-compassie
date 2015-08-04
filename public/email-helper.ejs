@@ -1,0 +1,42 @@
+<style>
+    h1,body {
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+    text-transform: none;
+    }
+    #navbar {
+        display: none;
+    }
+</style>
+<center>
+    <img width="580" height="250" src="http://www.levenincompassie.nl/assets/leven-in-compassie-email.png">
+    <h1 class="product">Titel</h1>
+</center>
+<div class="content"></div>
+<hr/>
+<input class="form-control" type="text"></input>
+<textarea class="form-control"></textarea>
+<hr/>
+<pre></pre>
+<script>
+    $content = $('.content');
+    $product = $('.product');
+    $textarea = $('textarea');
+    $input = $('input');
+    $header = $('h1');
+    $pre = $('pre');
+
+    $textarea.keyup(function(ev){
+        var text = $textarea.val();
+        var html = text.replace(/\n/g,"<br/>\n");
+        $content.html(html);
+        $pre.text(JSON.stringify(text));
+    });
+
+    $input.keyup(function(){
+        var text = $input.val();
+        $header.text(text);
+    })
+
+</script>

@@ -13,5 +13,17 @@
 	},
 	"fotos":{
 		"title":"Sfeer impressie"
-	}
+	},
+    "aanmelden":{
+        "title":"Aanmeldformulier",
+        "format":"row"
+    },
+    "email-helper":{
+        "title":"E-Mail Helper",
+        "format":"row"
+    },
+    "bedankt":{
+    	"hide_title":true,
+        "title":"Bedankt"
+    }
 }

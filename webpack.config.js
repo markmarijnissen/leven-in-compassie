@@ -15,7 +15,7 @@ var config = {
     },
     output: {
         path: path.join(__dirname,'public'),
-        filename: "[name]-bundle.js", 
+        filename: "[name]-bundle.js"
     },
     resolve: {
         alias: {
@@ -43,7 +43,8 @@ var config = {
     plugins:[
       new webpack.DefinePlugin({
         VERSION: JSON.stringify(version),
-        ENV: JSON.stringify(argv.minify? 'production':'dev')
+        ENV: JSON.stringify(argv.minify? 'production':'dev'),
+        API_KEY: JSON.stringify(argv.minify? 'zhMz3IMtrC':'test-rxcWA1HIZM'),
       })
     ],
     node: {
@@ -55,7 +56,7 @@ var config = {
  * Enable minification
  */
 if(argv.minify){
-  delete config.devtool;
+  config.devtool = 'source-map';
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     mangle:true,
     compress:{
