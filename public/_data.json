@@ -26,5 +26,9 @@
     	"hide_title":true,
         "title":"Bedankt",
         "format":"nothing"
+    },
+    "algemene-voorwaarden":{
+    	"title":"Algemene Voorwaarden",
+    	"format":"row"
     }
 }

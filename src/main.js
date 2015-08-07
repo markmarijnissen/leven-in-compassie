@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+require('./firebase');
 require('./layout');
 require('./theme/style.less');
 require('./bootstrap/js/dropdown');

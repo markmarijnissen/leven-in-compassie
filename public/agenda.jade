@@ -1,13 +1,9 @@
-h4 Ontvang uitnodigingen voor alle activiteiten
-p Via een maandelijkse e-mail nodig ik iedereen uit voor de open oefengroep en andere activiteiten. 
-!= partial("_newsletter.ejs")
-hr
-//-table.table
+table.table
 	tr
 		th Datum
 		th Tijd
 		th Activiteit
-	//-each date in ['Zaterdag 4 april','Zaterdag 2 mei']
+	each date in ['Zaterdag 22 augustus']
 		tr
 			td #{date}
 			td 13:30 - 17:00
@@ -21,7 +17,8 @@ hr
 			td #{date}
 			td 19:30 - 22:15
 			td: a(href="/aanbod/cursus") Ontdek de kracht van Compassie (#{index+1}/6)
-p
+
+//-p
 	| Alle activiteiten vinden plaats in  
 	a(href="#{locatie_lindenberg}",target="_blank") De Lindenberg, Nijmegen. 
 	| Informatie over de 
@@ -29,3 +26,7 @@ p
 	|  lees je 				
 	a(href="/over/tarieven") hier
 	| .
+
+h4 Ontvang uitnodigingen voor alle activiteiten
+p Via een maandelijkse e-mail nodig ik iedereen uit voor de open oefengroep en andere activiteiten. 
+!= partial("_newsletter.ejs")
