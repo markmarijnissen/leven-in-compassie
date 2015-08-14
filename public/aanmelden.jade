@@ -16,6 +16,11 @@ style.
     }
 .row: .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
     .loaded-hide.text-center.loading Aanmeldformulier wordt geladen...
+    .error-notfound(style="display:none;")
+        .alert.alert-danger
+            strong Aanmeldformulier voor deze activiteit bestaat niet (meer). 
+            p Problemen met aanmelden? Stuur een e-mail:
+        != partial('_email.ejs')
     .well.loaded-show(style="display:none;")
         span Aanmelden voor:
         h3.description(style="margin-top: 0; line-height: 1em; margin-bottom: 20px;")
@@ -99,7 +104,7 @@ style.
                             label(style="display: block;")
                                 input(type="checkbox",name="accept",value="accepted")
                                 | Ik accepteer de 
-                                a(href="/over/algemene-voorwaarden" target="_blank") algemene voorwaarden 
+                                a(href="/algemene-voorwaarden" target="_blank") algemene voorwaarden 
                                     i.glyphicon.glyphicon-new-window(style="font-size: 12px;")
                                 | .
 
@@ -107,5 +112,5 @@ style.
                                     i.glyphicon.glyphicon-ok.valid(style="display: none;")
                                     i.glyphicon.glyphicon-remove.invalid(style="display: none;")
 
-                        btn.btn-primary.btn-lg.pull-right.submit(disabled) Aanmelden   
+                        a.btn-primary.btn-lg.pull-right.submit(disabled) Aanmelden   
                             i.glyphicon.glyphicon-chevron-right

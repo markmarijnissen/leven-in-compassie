@@ -18,7 +18,7 @@ function Order(opts){
     this.validate = {
         "name":/([A-Za-z]{2,} ){1,}[A-Za-z]{2,}/,
         "email":/^[^@]+@[^\.]+\.[A-Za-z0-9]+$/,
-        "address":/^[A-Z-a-z]{2,} +[0-9]+$/,
+        "address":/^[A-Z-a-z]{2,} +[0-9a-zA-Z-_ ]+$/,
         "zipcode":/^[0-9]{4} ?[A-Za-z]{2}$/,
         "city":/^[A-Za-z]{2,}$/,
         "telephone":/^(0031|\+31|0)([0-9]){9}$/,
@@ -60,6 +60,8 @@ function Order(opts){
             self.el.loading.html('<h3>Aanmeldformulier</h3>Geen product opgegeven.<br/><a href="/aanbod/">Terug naar het aanbod.</a>');
             return;
         }
+        window.mouseflowHtmlDelay = 3000;
+
         self.el.inputs.change(self._validateField);
         self.el.inputs.keyup(self._validateField);
         self.el.submit.click(function(){
@@ -153,6 +155,11 @@ Order.prototype._validate = function validateAll(){
         }
     });
     localStorage.setItem('order-data',JSON.stringify(this.order));
+    if(this.order.telephone){
+        localStorage.setItem('number',this.order.telephone);
+    }
+    trackVar('name',1,this.order.name);
+    trackVar('email',2,this.order.email);
 
     this.el.submit.attr('disabled',valid? null: true);
     return valid;
@@ -174,6 +181,11 @@ Order.prototype.getProducts = function GetProducts(){
         .done(function(products){
             self.products = products;
             var product = products[self.order.product];
+            if(!product){
+                $('.error-notfound').show();
+                $('.loading').hide();
+                return;
+            }
             $('.amount').text(product.payment.amount - product.payment.discount);
             $('.discount').text(product.payment.discount);
             $('.first').text(product.payment.first);
@@ -210,6 +222,7 @@ Order.prototype.getIssuers = function GetIssuers(){
 };
 
 Order.prototype.pay = function Pay(){
+    if(ga) ga('send', 'event', 'button', 'click', 'aanmelden');
     return this._exec('POST','pay',this.order)
         .done(function(payment){
             localStorage.setItem('order-payment',JSON.stringify(payment));

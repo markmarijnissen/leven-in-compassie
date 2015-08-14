@@ -8,9 +8,13 @@ $(function(){
 
 	$button.click(function(){
 		if(validate()){
+			if(ga) ga('send', 'event', 'button', 'click', 'callmeback');
+			var name = $name.val();
+			var number = $number.val();
+			
 			callMeBackRef.push({
-				name: $name.val() || "",
-				number: $number.val() || ""
+				name: name || "",
+				number: number || ""
 			},function(err){
 				if(err){
 					alert('Er ging iets mis. Probeer opnieuw.');
@@ -22,6 +26,9 @@ $(function(){
 						.text('Bedankt!');
 				}
 			});	
+
+			trackVar('name',1,name);
+			localStorage.setItem('number',number);
 		}
 	});
 

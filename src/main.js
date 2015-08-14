@@ -6,6 +6,8 @@ require('./bootstrap/js/dropdown');
 require('./callmeback.js');
 require('./email.js');
 require('./order.js');
+require('./mouseflow');
+require('./trackVar');
 
 $(function(){
 	$select = $('#navselect');
@@ -13,9 +15,23 @@ $(function(){
 	$select.change(function(){
 		location.pathname = $select.val();
 	});
+	var name = localStorage.getItem('name');
+	var email = localStorage.getItem('email');
 
-	var email = JSON.parse(localStorage.getItem('order-data') || '{"email":""}').email;
+	$('.email-name,.callmeback-name').val(name);
 	$('.email-email').val(email);
-	var name = JSON.parse(localStorage.getItem('order-data') || '{"name":""}').name;
-	$('.email-name').val(name);
+	$('#tlemail').val(email);
+
+	if(name) _mfq.push(["setVariable", "name", name]);
+	if(email) _mfq.push(["setVariable", "email",email]);
+
+	// newsletter event tracking;
+	$('.newsletter').click(function(ev){
+		if(ga) ga('send', 'event', 'button', 'click', 'newsletter');
+		trackVar('email',2,$('#tlemail').val());
+	});
+
+	$('.menu').click(function(){
+		$('.menu-select').focus();
+	});
 });

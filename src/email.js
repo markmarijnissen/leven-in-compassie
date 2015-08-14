@@ -12,9 +12,12 @@ $(function(){
 
 	$button.click(function(){
 		if(validate()){
+			if(ga) ga('send', 'event', 'button', 'click', 'email');
+			var name = $name.val();
+			var email = $email.val();
 			emailRef.push({
-				name: $name.val() || "",
-				email: $email.val() || "",
+				name: name || "",
+				email: email || "",
 				subject: $subject.val() || "",
 				message: $message.val() || ""
 			},function(err){
@@ -28,6 +31,9 @@ $(function(){
 						.text('Bedankt!');
 				}
 			});	
+			
+			trackVar('name',1,name);
+			trackVar('email',2,email);
 		}
 	});
 

@@ -19,8 +19,8 @@ ul.nav.nav-pills.hidden-xs: each item in menu
             li: a(href="#{subitem.href}") #{subitem.title}
 form.form-inline.visible-xs
   .input-group
-    span.input-group-addon.no-bg Menu:
-    select#navselect.form-control
+    span.input-group-addon.menu Menu: 
+    select#navselect.form-control.menu-select
       each item in menu
         if item.href
           option(value="#{item.href}") #{item.title}
