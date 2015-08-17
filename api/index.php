@@ -228,7 +228,13 @@ Flight::map('getJson',function(){
 function calculateDiscount($product,&$first){
     $discount = 0;
     if(isset($product['discount']['first'])){
-        $n = count($product['participants']);
+        if(is_array($product['participant'])) {
+            $n = isset($product['participants'])? array_sum($product['participants']): 0;
+        } else if(isset($product['participant'])) {
+            $n = $product['participant'];
+        } else {
+            $n = 0;
+        }
         foreach($product['discount']['first'] as $max => $value){
             if($n < $max && $discount < $value) {
                 $first = $max;
