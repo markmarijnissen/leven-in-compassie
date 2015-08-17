@@ -298,7 +298,7 @@ function confirmOrder($status,$description,$data){
             );
 
             $firebase->set(FIREBASE_PATH . "/orders/$id/payment/email", true);
-            $firebase->push(FIREBASE_PATH . "/queue", $data->name);
+            $firebase->push(FIREBASE_PATH . "/queue", $data->name . " (" . $data->quantity . 'x)');
         }
 
     }

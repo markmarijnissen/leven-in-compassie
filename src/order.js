@@ -191,7 +191,7 @@ Order.prototype.getProducts = function GetProducts(){
             if(!product){
                 $('.error-notfound').show();
                 $('.loading').hide();
-                return;
+                return
             }
             $('.amount').text(product.payment.amount - product.payment.discount);
             self.el.total.text((self.order.quantity || 1) * (product.payment.amount - product.payment.discount));
