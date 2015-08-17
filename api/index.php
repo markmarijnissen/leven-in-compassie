@@ -45,7 +45,7 @@ Flight::route('GET /products',function(){
    global $firebase;
     $products = json_decode($firebase->get(FIREBASE_PATH . "/products"),true);
     foreach($products as &$product){
-        $product['participants'] = isset($product['participants'])? array_sum($product['participants']): 0;
+        $product['participants'] = getNumber($product);
         $first = 0;
         $product['payment']['discount'] = calculateDiscount($product,$first);
         $product['payment']['first'] = $first;
@@ -228,13 +228,7 @@ Flight::map('getJson',function(){
 function calculateDiscount($product,&$first){
     $discount = 0;
     if(isset($product['discount']['first'])){
-        if(is_array($product['participant'])) {
-            $n = isset($product['participants'])? array_sum($product['participants']): 0;
-        } else if(isset($product['participant'])) {
-            $n = $product['participant'];
-        } else {
-            $n = 0;
-        }
+        $n = getNumber($product);
         foreach($product['discount']['first'] as $max => $value){
             if($n < $max && $discount < $value) {
                 $first = $max;
@@ -243,6 +237,17 @@ function calculateDiscount($product,&$first){
         }
     }
     return $discount;
+}
+
+function getNumber($product){
+    if(is_array($product['participants'])) {
+        $n = array_sum($product['participants']);
+    } else if(isset($product['participants'])) {
+        $n = $product['participants'];
+    } else {
+        $n = 0;
+    }
+    return $n;
 }
 
 /**
