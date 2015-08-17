@@ -16,11 +16,13 @@ function Order(opts){
         //"accept":true
     };
     this.validate = {
+        "issuer":/.*/,
         "name":/([A-Za-z]{2,} ){1,}[A-Za-z]{2,}/,
         "email":/^[^@]+@[^\.]+\.[A-Za-z0-9]+$/,
         "address":/^[A-Z-a-z]{2,} +[0-9a-zA-Z-_ ]+$/,
         "zipcode":/^[0-9]{4} ?[A-Za-z]{2}$/,
         "city":/^[A-Za-z]{2,}$/,
+        "quantity":/^[0-9]{1,2}$/,
         "telephone":/^(0031|\+31|0)([0-9]){9}$/,
         "accept":/^true$/,
         "comment":/.*/
@@ -43,14 +45,15 @@ function Order(opts){
     $(function(){
         self.el = {
             'issuers': $('#issuers'),
-            inputs: $('input[name]'),
+            inputs: $('input[name],select[name]'),
             accept: $('input[name="accept"]'),
             comment: $('textarea[name="comment"]'),
             submit: $('.submit'),
             form: $('form[product]'),
             product: $('.description'),
             full: $('.full'),
-            loading: $('.loading')
+            loading: $('.loading'),
+            total: $('.total-amount')
         };
 
         if(self.el.form.length === 0) return; //abort if there is no form...
@@ -154,6 +157,8 @@ Order.prototype._validate = function validateAll(){
             self.order[name] = val;
         }
     });
+    self.order.quantity = self.order.quantity? self.order.quantity * 1.0: 1;
+
     localStorage.setItem('order-data',JSON.stringify(this.order));
     if(this.order.telephone){
         localStorage.setItem('number',this.order.telephone);
@@ -162,6 +167,8 @@ Order.prototype._validate = function validateAll(){
     trackVar('email',2,this.order.email);
 
     this.el.submit.attr('disabled',valid? null: true);
+    if(this.product)
+        this.el.total.text((this.order.quantity || 1) * (this.product.payment.amount - this.product.payment.discount));
     return valid;
 };
 
@@ -180,18 +187,20 @@ Order.prototype.getProducts = function GetProducts(){
     return this._exec('GET','products')
         .done(function(products){
             self.products = products;
-            var product = products[self.order.product];
+            var product = self.product = products[self.order.product];
             if(!product){
                 $('.error-notfound').show();
                 $('.loading').hide();
                 return;
             }
             $('.amount').text(product.payment.amount - product.payment.discount);
+            self.el.total.text((self.order.quantity || 1) * (product.payment.amount - product.payment.discount));
             $('.discount').text(product.payment.discount);
             $('.first').text(product.payment.first);
             if(product.payment.discount > 0){
                 $('.discount-show').show();
             }
+            $('select[name="quantity"] option').slice(product.max - product.participants).remove();
             self.el.product.text(product.payment.description);
             if(product.participants < product.max || self.opts.forcePay){
                 self.el.form.show();

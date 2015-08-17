@@ -45,7 +45,7 @@ Flight::route('GET /products',function(){
    global $firebase;
     $products = json_decode($firebase->get(FIREBASE_PATH . "/products"),true);
     foreach($products as &$product){
-        $product['participants'] = count($product['participants']);
+        $product['participants'] = isset($product['participants'])? array_sum($product['participants']): 0;
         $first = 0;
         $product['payment']['discount'] = calculateDiscount($product,$first);
         $product['payment']['first'] = $first;
@@ -65,6 +65,7 @@ Flight::route('GET /issuers',function(){
  *  POST /pay
  *
  *      - product (firebase product name)
+ *      - quantity 1
  *      - email
  *      - name
  *      - telephone
@@ -78,6 +79,7 @@ Flight::route('POST /pay',function(){
 
     // Validate Form
     $order = Flight::validate(['product','email','name','telephone','address','zipcode','city','accept']);
+    if(!isset($order['quantity'])) $order['quantity'] = 1;
 
     // Order ID is based on product name and e-mail.
     $id = hash_hmac("md5",$order['email'] . $order['product'],HASH_SECRET);
@@ -93,6 +95,8 @@ Flight::route('POST /pay',function(){
 
     // Calculate Discount
     $molliePaymentInfo['amount'] -= calculateDiscount($product,$first);
+    $molliePaymentInfo['amount'] *= $order['quantity'];
+    $molliePaymentInfo['description'] .= ' (' . $order['quantity'] . 'x)';
 
     $redirectURL =  "http://www.levenincompassie.nl/bedankt?ref=$id";
 
@@ -121,8 +125,8 @@ Flight::route('POST /pay',function(){
     // Store order in firebase
     $firebase->set(FIREBASE_PATH . "/orders/$id",$order);
 
-    // Track number of participants (false = unconfirmed, true = paid & confirmed)
-    $firebase->set(FIREBASE_PATH . "/products/{$order['product']}/participants/$id",false);
+    // Track number of participants
+    $firebase->set(FIREBASE_PATH . "/products/{$order['product']}/participants/$id",$order['quantity']);
 
     // Response
     Flight::json($order['payment'],200);
@@ -254,7 +258,7 @@ function confirmOrder($status,$description,$data){
     if ($status == 'paid')
     {
         // Confirm Participant
-        $firebase->set(FIREBASE_PATH . "/products/$product/participants/$id",true);
+        // $firebase->set(FIREBASE_PATH . "/products/$product/participants/$id",true);
 
         // Create e-mail using mustache and a template
         $email_sent = json_decode($firebase->get(FIREBASE_PATH . "/orders/$id/payment/email"));

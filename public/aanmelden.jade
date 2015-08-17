@@ -86,11 +86,28 @@ style.
 
                     .form-group
                         label Kosten:
-                        .panel(style="margin-bottom:0"): .panel-body 
-                            |  &euro; 
-                            span.amount ... 
-                            span.text-muted.discount-show(style="display: none;")  - prijs met korting
-                        .alert.alert-warning.discount-show(style="display: none;") De eerste <span class="first">...</span> aanmeldingen ontvangen &euro;<span class="discount">...</span> korting.
+                    
+                        table.table.table-condensed.table-bordered(style="margin-bottom: 0;")
+                            tr
+                                td Prijs per persoon:&nbsp;
+                                td &euro; 
+                                    span.amount ...
+                                    span.text-muted.discount-show(style="display: none;")  - prijs met korting
+                            tr 
+                                td Aantal:
+                                td 
+                                      select(name="quantity").form-control.input-sm
+                                        option(value="1") 1 persoon
+                                        each i in ['2','3','4','5','6','7','8','9','10']
+                                            option(value="#{i}") #{i} personen
+                            tr 
+                                td: strong Totaal:
+                                td: strong &euro; 
+                                    span.total-amount
+
+                        .alert.alert-warning.discount-show(style="display: none;") Prijs is inclusief &euro;<span class="discount">...</span> per persoon korting.            
+
+                    .form-group
 
                         label Betalen via iDEAL:
                         p: select(name="issuer")#issuers.form-control.input-sm: option Kies een bank
