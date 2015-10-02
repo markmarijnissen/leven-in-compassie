@@ -1,17 +1,15 @@
-<!--
-### [Ontdek de kracht van compassie](/aanbod/cursus)
+### [Basis Cursus: Verbinding, Empathie en Inzicht](/aanbod/cursus)
 
-Leer in 6 avonden hoe je met behulp van geweldloze communicatie meer warmte, verbinding en kracht in je leven kunt brengen. <br/>[Lees meer &rarr;](/aanbod/cursus)
--->
+Leer in 6 avonden hoe je met behulp van geweldloze communicatie meer verbinding, compassie en inzicht in je leven kunt brengen. <br/>[Lees meer &rarr;](/aanbod/cursus)
+
+### [Dagworkshop: Verbinden in je relatie](/aanbod/verbinding-in-je-relatie)
+
+Ontdek meer verbinding, intimiteit en diepgang in je relatie met behulp van geweldloze communicatie. <br/>[Lees meer &rarr;](/aanbod/verbinden-in-relatie)
 
 ### [Persoonlijke Coaching](/aanbod/persoonlijke-coaching)
 
-Ik begeleid je stap voor stap om geweldloze communicatie
+Ik luister empathisch naar wat er in je leeft. Ik vertel je terug wat ik je hoor en zie op een compassievolle manier. Dit geeft rust, opluchting, helderheid en inzicht. Ik begeleid je ook stap voor stap om geweldloze communicatie
 toe te passen op situaties uit je eigen leven. <br/>[Lees meer &rarr;](/aanbod/persoonlijke-coaching)
-
-### [1 op 1 Compassie](/aanbod/1-op-1-compassie)
-
-Ik luister empathisch naar wat er in je leeft. Ik vertel je terug wat ik je hoor en zie op een compassievolle manier. Dit geeft rust, opluchting, helderheid en inzicht. <br/>[Lees meer &rarr;](/aanbod/1-op-1-compassie)
 
 ### [Relatie Sessie](/aanbod/relatie-sessie)
 
@@ -21,6 +19,8 @@ Een relatie: Ik ervaar daar veel liefde, warmte en intimiteit... maar ben daardo
 
 Workshops, team-building en conflict bemiddeling voor bedrijven. <br/>[Lees meer &rarr;](/aanbod/voor-bedrijven)
 
+<!--
 ### [Open Oefengroep](/aanbod/oefengroep)
 
 Ervaar verbinding, compassie en helderheid door te oefenen met geweldloze communicatie. Open voor iedereen die nieuwsgierig is!  <br/>[Lees meer &rarr;](/aanbod/oefengroep)
+-->

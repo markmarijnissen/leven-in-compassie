@@ -40,88 +40,29 @@
 <div class="row">
 	<section class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 <% } %>	
-		<%
-		var aanbod = [
-			{
-				"title":"Compassie",
-				"pain":"Voel je afstand of stress? Ga je door een moeilijke tijd?",
-				"solution":"Met <a href=\"/aanbod/1-op-1-compassie\">1-op-1 compassie</a> of een <a href=\"/aanbod/relate-sessie\">relatie sessie</a> geef ik opluchting, inzicht en compassie.",
-				"cta":"Ontvang compassie",
-				"href":"/aanbod/1-op-1-compassie"
-			},{
-				"title":"Training",
-				"pain":"Wil je meer compassie en verbinding met jezelf en anderen?",
-				"solution":"Met <a href=\"/aanbod/persoonlijke-coaching\">persoonlijke coaching</a> leer je zelf verbinding, zelf-compassie en kracht te scheppen.",
-				"cta":"Leer verbinden",
-				"href":"/aanbod/persoonlijke-coaching"					
-			},{
-				"title":"Zakelijk",
-				"pain":"Workshops voor o.a. empathisch luisteren en omgaan met conflict.",
-				"solution":"Herstel harmonie op de werkvloer met conflict-bemiddeling.",
-				"cta":"Boek nu",
-				"href":"/aanbod/voor-bedrijven"
-			}
-		]
-		%>
 		<h2>Aanbod</h2>
- 		<div class="row">
- 			<div class="col-sm-4">
- 				<h2><%- aanbod[0].title %></h2>
- 				<div class="visible-xs">
- 					<p><%- aanbod[0].pain %> <%- aanbod[0].solution %></p>
- 					<p><a class="btn btn-primary" href="<%- aanbod[0].href %>"><%- aanbod[0].cta %></a></p>
- 				</div>
- 			</div>
- 			<div class="col-sm-4 highlight">
- 				<h2><%- aanbod[1].title %></h2>
- 				<div class="visible-xs">
- 					<p><%- aanbod[1].pain %> <%- aanbod[1].solution %></p>
- 					<p><a class="btn btn-primary" href="<%- aanbod[1].href %>"><%- aanbod[1].cta %></a></p>
- 				</div>
- 			</div>
- 			<div class="col-sm-4">
- 				<h2><%- aanbod[2].title %></h2>
- 				<div class="visible-xs">
- 					<p><%- aanbod[2].pain %> <%- aanbod[2].solution %></p>
- 					<p><a class="btn btn-primary" href="<%- aanbod[2].href %>"><%- aanbod[2].cta %></a></p>
- 				</div>
- 			</div>
- 		</div>
- 		<div class="row hidden-xs">
- 			<div class="col-sm-4 ">
- 				<p><%- aanbod[0].pain %></p>
- 			</div>
- 			<div class="col-sm-4  highlight">
- 				<p><%- aanbod[1].pain %></p>
- 			</div>
- 			<div class="col-sm-4 ">
- 				<p><%- aanbod[2].pain %></p>
- 			</div>
- 		</div>
- 		<div class="row hidden-xs">
- 			<div class="col-sm-4 ">
- 				<p><%- aanbod[0].solution %></p>
- 			</div>
- 			<div class="col-sm-4  highlight">
- 				<p><%- aanbod[1].solution %></p>
- 			</div>
- 			<div class="col-sm-4 ">
- 				<p><%- aanbod[2].solution %></p>
- 			</div>
- 		</div>
- 		<div class="row hidden-xs">
- 			<div class="col-sm-4">
- 				<p><a href="<%- aanbod[0].href %>" class="btn btn-primary"><%- aanbod[0].cta %></a></p>
- 			</div>
- 			<div class="col-sm-4 highlight">
- 				<p><a href="<%- aanbod[1].href %>" class="btn btn-primary"><%- aanbod[1].cta %></a></p>
- 			</div>
- 			<div class="col-sm-4">
- 				<p><a href="<%- aanbod[2].href %>" class="btn btn-primary"><%- aanbod[2].cta %></a></p>
- 			</div>
- 		</div>
+		<div class="row highlight">
+			<div class="col-sm-6">
+				<h3>Basis Cursus</h3>
+		 		<p class="text-left" style="height: 120px;">
+		 		Leer in 6 avonden alle stappen en valkuilen van verbindende communicatie. Breng meer verbinding, minder afstand, meer inzicht en meer compassie in je leven. <a href="/aanbod/cursus">Lees verder...</a></p>
+		 		<p class="well text-left"><strong>Basis Cursus: Verbinding, Empathie en Inzicht</strong><br/>Vrijdag 13, 20, 27 november en 4, 11, 18 december<br/>van 19:30 tot 22:00,<br/>in de Lindenberg, Nijmegen.<br/>Max 10 deelnemers.<br/>Kosten: &euro; 180,-</p>
+		 		<p ><a class="btn btn-primary btn-lg" href="/aanmelden?p=cursus">Aanmelden</a></p>
+			</div>
+			<div class="col-sm-6">
+				 <h3>Verbinding in je relatie</h3>
+		 		<p class="text-left" style="height: 120px;">Ontdek meer verbinding, intimiteit en diepgang in je relatie met behulp van verbindende communicatie.<a href="/aanbod/verbinding-in-je-relatie">Lees verder...</a></p>
+		 		<p class="well text-left"><strong>Dagworkshop: Verbinden in je relatie</strong><br/>Zaterdag 7 november,<br/>van 9:30 tot 17:00,<br/>in de Lindenberg, Nijmegen.<br/>Max 10 deelnemers.<br/>Kosten: &euro; 90,-</p>
+		 		<p><a class="btn btn-primary btn-lg" href="/aanmelden?p=verbinding-in-je-relatie">Aanmelden</a></p>
+			</div>
+
+		</div>
  		<hr style="margin: 10px 0;"/>
-		<p>Wil je kennismaken met de methode? <br/>Kom eens langs op een <a href="/aanbod/oefengroep">open oefengroep</a>.</p>
+ 		<p>
+		<strong>Individuele begeleiding?</strong><br/> 
+		<a href="/aanbod/persoonlijke-coaching">Persoonlijke coaching</a><br/>
+		<a href="/aanbod/relatie-sessie">Relatie sessie</a><br/>
+ 		</p>
 		<%- next %>
 <%- slide_end %>
 <%- slide_start %>

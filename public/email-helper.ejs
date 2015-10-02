@@ -20,6 +20,17 @@
 <hr/>
 <pre></pre>
 <script>
+    if(location.search){
+        var ref = new Firebase('https://madebymark.firebaseio.com/levenincompassie/products/'+location.search.substr(1)+'/email');
+        ref.once('value',function(snap){
+            var val = snap.val();
+            if(val){
+                $textarea.val(val);
+                $textarea.trigger('keyup');
+            }
+        });
+    }
+
     $content = $('.content');
     $product = $('.product');
     $textarea = $('textarea');

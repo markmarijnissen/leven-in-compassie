@@ -1,32 +1,62 @@
-table.table
-	tr
-		th Datum
-		th Tijd
-		th Activiteit
-	each date in ['Zaterdag 22 augustus']
+.col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+	h1.text-center Agenda
+	table.table
 		tr
-			td #{date}
-			td 13:30 - 17:00
-			td: a(href="/aanbod/oefengroep") Open Oefengroep
-	//-tr
-		td Donderdag 4 juni
-		td 19:30 - 22:15
-		td: a(href="/aanbod/oefengroep") Open Oefengroep
-	//-each date,index in ['Donderdag 11 juni','Donderdag 25 juni','Donderdag 2 juli','Donderdag 9 juli','Donderdag 16 juli','Donderdag 23 juni']
+			th Datum
+			th Tijd
+			th Activiteit
+			th Kosten
+			th &nbsp;
+		//- each date in ['Zaterdag 22 augustus']
+			tr
+				td #{date}
+				td 13:30 - 17:00
+				td: a(href="/aanbod/oefengroep") Open Oefengroep
+				td &euro; 20,-
+
 		tr
-			td #{date}
+			td 7 november
+			td 9:30 - 17:00
+			td: a(href="/aanbod/verbinding-in-je-relatie") Dagworkshop: Verbinding in je relatie
+			td &euro; 90,-
+			td: a(href="/aanmelden?p=verbinding-in-je-relatie") Aanmelden
+		tr
+			td Vrijdag
+				br
+				| 13 november
+				br
+				| 20 november
+				br
+				| 27 november
+				br
+				| 4 december
+				br
+				| 11 december
+				br
+				| 18 december
+			td 19:30 - 22:00
+			td: a(href="/aanbod/cursus") Basis Cursus: <br/>Verbinding, Empathie en Inzicht
+			td &euro; 180,-
+			td: a(href="/aanmelden?p=cursus") Aanmelden
+		//-tr
+			td Donderdag 4 juni
 			td 19:30 - 22:15
-			td: a(href="/aanbod/cursus") Ontdek de kracht van Compassie (#{index+1}/6)
+			td: a(href="/aanbod/oefengroep") Open Oefengroep
+		//-each date,index in ['Donderdag 11 juni','Donderdag 25 juni','Donderdag 2 juli','Donderdag 9 juli','Donderdag 16 juli','Donderdag 23 juni']
+			tr
+				td #{date}
+				td 19:30 - 22:15
+				td: a(href="/aanbod/cursus") Ontdek de kracht van Compassie (#{index+1}/6)
 
-//-p
-	| Alle activiteiten vinden plaats in  
-	a(href="#{locatie_lindenberg}",target="_blank") De Lindenberg, Nijmegen. 
-	| Informatie over de 
-	a(href="/over/tarieven") kosten
-	|  lees je 				
-	a(href="/over/tarieven") hier
-	| .
+	//-p
+		| Alle activiteiten vinden plaats in  
+		a(href="#{locatie_lindenberg}",target="_blank") De Lindenberg, Nijmegen. 
+		| Informatie over de 
+		a(href="/over/tarieven") kosten
+		|  lees je 				
+		a(href="/over/tarieven") hier
+		| .
 
-h4 Ontvang uitnodigingen voor alle activiteiten
-p Via een maandelijkse e-mail nodig ik iedereen uit voor de open oefengroep en andere activiteiten. 
-!= partial("_newsletter.ejs")
+	h4 Ontvang uitnodigingen voor alle activiteiten
+	p Via een maandelijkse e-mail nodig ik iedereen uit voor de open oefengroep en andere activiteiten. Ik deel ook een persoonlijke ervaring en tip in elke mail.
+	!= partial("_newsletter.ejs")
