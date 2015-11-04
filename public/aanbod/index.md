@@ -2,9 +2,9 @@
 
 Leer in 6 avonden hoe je met behulp van geweldloze communicatie meer verbinding, compassie en inzicht in je leven kunt brengen. <br/>[Lees meer &rarr;](/aanbod/cursus)
 
-### [Dagworkshop: Verbinden in je relatie](/aanbod/verbinding-in-je-relatie)
+<!-- ### [Dagworkshop: Verbinden in je relatie](/aanbod/verbinding-in-je-relatie)
 
-Ontdek meer verbinding, intimiteit en diepgang in je relatie met behulp van geweldloze communicatie. <br/>[Lees meer &rarr;](/aanbod/verbinden-in-relatie)
+Ontdek meer verbinding, intimiteit en diepgang in je relatie met behulp van geweldloze communicatie. <br/>[Lees meer &rarr;](/aanbod/verbinden-in-relatie) -->
 
 ### [Persoonlijke Coaching](/aanbod/persoonlijke-coaching)
 

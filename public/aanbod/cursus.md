@@ -12,15 +12,15 @@ De nadruk ligt op oefenen, voelen en ervaren - niet op  theoretische kennis.
 * Het magische moment als een conflict transformeert in verdieping en verbinding.
 * Kracht en levendigheid als er spontaan creatieve alternatieven onstaan voor een compromis dat je hebt gedaan.
 
-### Inhoud
+### Programma
 
  **6 avondbijeenkomsten** (2,5 uur per week)<br/>
 Je krijgt 6 avonden oefeningen in zelfcompassie, spreken en luisteren. Na korte uitleg en demonstratie gaan we oefenen met situaties uit ons eigen leven.
 
- **Empathie buddy** (60 min per week)<br/>
+ **Empathie buddy** (60 min per week, optioneel)<br/>
 Oefen elke week in een ander tweetal met empathie geven. Zo help je elkaar met steun, inzicht, leren en (zelf)verbinding.
 
- **Oefeningen voor thuis** (10 min per dag)<br/>
+ **Oefeningen voor thuis** (10 min per dag, optioneel)<br/>
 Elke week twee oefeningen om de stof direct toe te passen in je dagelijks leven: Een oefenning voor bewustwording en een oefening om geweldloze communicatie toe te passen in je leven.
 
  **Facebook groep**<br/>
@@ -48,8 +48,7 @@ Deel je vragen, ervaringen en verhalen met elkaar in een privé facebook groep.
 
 **Twijfel je nog over deelname?** <br/>Ik kan je helpen een keuze te maken. Ik geef je een voorproefje van Geweldloze Communicatie door het toe te passen op je twijfels. Zo krijg je inzicht en kun je beslissen of deze cursus bij je past.
 
-<a href="#more" class="more">Wil je meer weten over wat je leert?</a>
-<div id="more" class="more well" style="display: none;">
+### Inhoud
 
 Onderwerpen die onder andere aan bod komen:
 
@@ -62,6 +61,3 @@ Onderwerpen die onder andere aan bod komen:
 * Empathisch luisteren... en als je dit al kan dan kun je deze vaardigheid enorm verdiepen!
 * Inchecken: Leer je gevoelens en behoeftes te herkennen en benoemen en ontwikkel zelfcompassie voor je innerlijke criticus.
 * Vertrouwen ontwikkelen in het onstaan van spontane creatieve ideeën als je vastloopt in een conflict of compromis.
-
-</div>
-<script>$('a.more').click(function(){$('#more').show()});</script>

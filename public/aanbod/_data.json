@@ -11,8 +11,12 @@
 	"verbinding-in-je-relatie":{
 		"title":"Dagworkshop: Verbinden in je relatie"
 	},
+	"introduction-nvc-nijmegen":{
+		"title": "Weekend introduction to Nonviolent Communication (with Oriane Boyer)",
+		"hide_title": true
+	},
 	"cursus":{
-		"title":"Basis Cursus: Verbinding, Empathie en Inzicht"
+		"title":"Avondcursus: Communiceren met Compassie"
 	},
 	"relatie-sessie":{
 		"title":"Relatie Sessie"

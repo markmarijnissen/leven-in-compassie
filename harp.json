@@ -19,11 +19,12 @@
 					},{
 						"title":"---"
 					},{
-						"title":"Basis Cursus: Verbinding, Empathie en Inzicht",
+						"title":"Avondcursus: Communiceren met Compassie",
 						"href":"/aanbod/cursus"
 					},{
-						"title":"Dagworkshop: Verbinden in je relatie",
-						"href":"/aanbod/verbinden-in-relatie"
+						"title":"Weekend Introductie (met Oriane Boyer, Engels)",
+						"blank":true,
+						"href":"http://www.connecting2life.net/offers/workshops/netherlands/introduction-nvc-nijmegen/"
 					},{
 						"title":"---"
 					},{
@@ -37,11 +38,6 @@
 					},{
 						"title":"Voor bedrijven",
 						"href":"/aanbod/voor-bedrijven"
-					},{
-						"title":"---"
-					},{
-						"title":"Tarieven",
-						"href":"/over/tarieven"
 					}
 				]
 			},{
