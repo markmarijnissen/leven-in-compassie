@@ -240,9 +240,11 @@ Order.prototype.pay = function Pay(){
 
 };
 
-var order = new Order({
-    url:'http://www.levenincompassie.nl/api/[ACTION]?token='+API_KEY,
-    forcePay: !!queryparams['force-pay'],
-    product: queryparams.p
+$(function(){
+    window.order = new Order({
+        url:'http://www.levenincompassie.nl/api/[ACTION]?token='+API_KEY,
+        forcePay: !!queryparams['force-pay'],
+        product: queryparams.p || $('#aanmelden').attr('product')
+    });
+    if(typeof headroom !== 'undefined') headroom.unpin();
 });
-window.order = order;

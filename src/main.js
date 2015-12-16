@@ -3,6 +3,7 @@ require('./firebase');
 require('./layout');
 require('./theme/style.less');
 require('./bootstrap/js/dropdown');
+require('./bootstrap/js/affix');
 require('./callmeback.js');
 require('./email.js');
 require('./order.js');
@@ -33,5 +34,37 @@ $(function(){
 
 	$('.menu').click(function(){
 		$('.menu-select').focus();
+	});
+
+	$(window).on('hashchange',function(){
+		setTimeout(function(){
+			headroom.unpin();
+		},0);
+	});
+
+	// Generate TOC
+	$toc = $('#toc');
+	if($toc){
+		$h3 = $('h3[id],.anchor[title]');
+		if($h3.length > 2){
+			$toc.append($('<li><strong>Inhoud</strong></li>'));
+			$h3.each(function(index,el){
+				var text = $(el).text() || $(el).attr('title');
+				var href = '#' + $(el).attr('id');
+				console.log(href,text);
+				$toc.append(
+					$('<li></li>').append(
+						$('<a></a>').text(text).attr('href',href)
+					)
+				);
+			});	
+		}
+	}
+
+	// MORE CLICKER
+	$('a.more').click(function(){
+		$('#more').removeClass('hidden');
+		$('.more').remove();
+		trackVar('clickmore',3,1);
 	});
 });

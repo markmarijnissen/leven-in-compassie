@@ -16,11 +16,12 @@ $(function(){
 	if(docHeight > winHeight + 500){
 		var headroom  = new Headroom(navbar,{
 			tolerance: {
-				up: 5,
-				down: 10
+				up:20,
+				down: 5
 			},
 			offset: offset
 		});
 		headroom.init();
+		window.headroom = headroom;
 	}
 });

@@ -14,17 +14,12 @@
 				"title":"Aanbod",
 				"items":[
 					{
-						"title":"Overzicht",
-						"href":"/aanbod/index.html"
-					},{
-						"title":"---"
-					},{
+						"title":"Ontmoeting in Aandacht",
+						"href":"/aanbod/ontmoeting-in-aandacht"
+					},
+					{
 						"title":"Avondcursus: Communiceren met Compassie",
 						"href":"/aanbod/cursus"
-					},{
-						"title":"Weekend Introductie (met Oriane Boyer, Engels)",
-						"blank":true,
-						"href":"http://www.connecting2life.net/offers/workshops/netherlands/introduction-nvc-nijmegen/"
 					},{
 						"title":"---"
 					},{
@@ -42,7 +37,7 @@
 				]
 			},{
 				"title":"De Methode",
-				"href":"/info/geweldloze-communicatie"
+				"href":"/info/"
 			},{
 				"title":"Reacties",
 				"href":"/reacties"
