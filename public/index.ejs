@@ -1,4 +1,3 @@
-
 <% var next = "<p><a class=\"btn btn-next btn-lg navigate-down\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a></p>"; %>
 <% var cols = "col-md-6 col-md-offset-3 col-xs-12 col-sm-10 col-sm-offset-1"; %>
 <% var slide_start = revealjs? "<section>": "<div class=\"row\"><section class=\""+cols+"\">"; %>
@@ -8,32 +7,20 @@
 	<img style="height: <%= revealjs? 200: 300 %>px; position: relative; left: 5px; margin-top: 20px;" src="/assets/leven-in-compassie-logo.png"></img>
 	<h1 class="home-title">Leven in Compassie</h1>
 	<p>
-		<span style="position: relative; left: 3px;">gebaseerd op <a href="/info/geweldloze-communicatie">Geweldloze Communicatie</a></span><br/>
+		<span style="position: relative; left: 3px;">gebaseerd op <a href="/info">Geweldloze Communicatie</a></span><br/>
 		door <a href="/over/markmarijnissen">Mark Marijnissen</a>
 	</p>
 	<%- next %>
 <%- slide_end %>
 <%- slide_start %>
-		<% var quote = "Compassie werkt ontwapenend - het laat zien hoe mensen mooi zijn en dat schept verbinding" %>
-		<% if(!revealjs){%>
-			<h2 class="mark-marijnissen-quote">"<%- quote %>"</h2>
-		<% } %>
-		<div class="row">
-			<div class="col-xs-6 text-right">
-				<img class="mark-marijnissen" style="width: 100%;" src="/assets/mark.jpg"></img>
-			</div>
-			<div class="col-xs-6 nr-left">
-				<% if(revealjs){%>
-					<h2 style="line-height: 1; margin-bottom: 20px;">""<%- quote %>""</h2>
-				<% } %>
-				<p>Ik ben Mark Marijnissen. Ik geef sinds 2013 workshops gebaseerd op Geweldloze Communicatie.</p>
-				<p>Door Geweldloze Communicatie heb ik geleerd open en kwetsbaar te zijn. Ik heb meer inzicht in wat ik voel en nodig heb. Ik voel me meer verbonden met de mensen om mij heen. Daar geniet ik zo van, dat ik er mijn werk van heb gemaakt: Ik leef met compassie.</p>
-				<p>Mijn missie is jou dat ook te leren. Ik wil jou ook laten genieten van zelfcompassie, verbinding en inzicht.</p>
-				<p>Ik ontmoet je graag!</p>
-				<p class="text-right">-Mark</p>
-			</div>
-		</div>
-		<%- next %>
+	<h2>Waar is compassie goed voor?</h2>
+	<div class="text-left">
+		<p><h4>Emotionele intelligentie</h4>Je leert omgaan met innerlijke conflicten, jouw innerlijke criticus, stress, schuld, boosheid, verdriet of wat er ook in je leeft. Ook leer je te reageren op andermans emoties.</p>
+		<p><h4>Persoonlijke groei</h4>Je leert jouw gevoelens en behoeftes beter kennen en je krijgt inzicht in jouw onbewuste denk- en communicatiegewoontes.</p>
+		<p><h4>Verbinding in jouw relaties</h4> Empathisch luisteren zorgt voor meer intimiteit, warmte en verbinding. Ook handig om frustraties en ruzies op te lossen. Met je partner, op de werkvloer, bij je familie of met je vrienden.</p>
+		<p><h4>Persoonlijk leiderschap</h4> Het geeft veel kracht en plezier als je weet wat je nodig hebt en weet hoe je hierom kunt vragen. Door te spreken met compassie wordt het een stuk makkelijker om voor jezelf te zorgen en je leven leuker te maken.</p>
+	</div>
+	<%- next %>
 <%- slide_end %>
 <% if(revealjs) { %>
 <section>
@@ -41,38 +28,20 @@
 <div class="row">
 	<section class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 <% } %>	
-		<h2>Aanbod</h2>
-		<div class="row highlight">
-	 		<div class="col-sm-6">
-				 <h3 class="lineheight">Ontmoeting<br/>in<br/>Aandacht</h3>
-		 		<p class="text-left" style="height: 100px;"><strong>Geweldloze Communicatie + Mindfulness.</strong> Een ervaring die jou inzicht, levendigheid, verbinding en meer oplevert.<br/><a href="/aanbod/ontmoeting-in-aandacht">Lees meer...</a></p>
-		 		<p class="well text-left">
-		 			<strong>Datum:</strong> Zaterdag 12 december,<br/><br/>
-		 			<strong>Tijd:</strong> van 12:00 tot 17:00<br/>
-		 			<strong>Locatie:</strong> in de Lindenberg, Nijmegen<br/>
-		 			<strong>Kosten:</strong> € 75,-<br/>
-		 		<p><a class="btn btn-primary btn-lg" href="/aanbod/ontmoeting-in-aandacht">Info &amp; Aanmelden <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+	<h2>Aanbod</h2>
+	<%- partial('aanbod/index',{ embed: true }) %>
+		<%- next %>
+<%- slide_end %>
+<%- slide_start %>
+		<h2>Door Mark Marijnissen</h2>
+		<div class="row">
+			<div class="col-xs-6 text-right">
+				<img class="mark-marijnissen" style="width: 100%;" src="/assets/mark.jpg"></img>
 			</div>
-			<div class="col-sm-6">
-				<h3 class="lineheight">Avondcursus: Communiceren met Compassie</h3>
-		 		<p class="text-left" style="height: 100px;">
-		 		Leer in 6 avonden vaardigheden om verbinding, empathie en inzicht te scheppen in je leven.<br/><a href="/aanbod/cursus">Lees verder...</a></p>
-		 		<p class="well text-left">
-			 		<strong>Datum:</strong> Vrijdag 8, 15, 22 en 29 januari<br/>en 5 en 12 februari.<br/>
-			 		<strong>Tijd:</strong> van 19:30 tot 22:00,<br/>
-			 		<strong>Locatie:</strong> in de Lindenberg, Nijmegen.<br/>
-			 		<strong>Kosten:</strong> &euro; 180,-<br/>
-		 		</p>
-		 		<p ><a class="btn btn-primary btn-lg" href="/aanbod/cursus">Info &amp; Aanmelden <i class="glyphicon glyphicon-chevron-right"></i></a><br/><br/></p>
+			<div class="col-xs-6 nr-left text-left">
+				<%- partial('_markmarijnissen') %>
 			</div>
-
 		</div>
- 		<hr style="margin: 10px 0;"/>
- 		<p>
-		<strong>Individuele begeleiding?</strong><br/> 
-		<a href="/aanbod/persoonlijke-coaching">Persoonlijke coaching</a><br/>
-		<a href="/aanbod/relatie-sessie">Relatie sessie</a><br/>
- 		</p>
 		<%- next %>
 <%- slide_end %>
 <%- slide_start %>
@@ -101,3 +70,6 @@
 		</p>
 <%- slide_end %>
 </section>
+<% if(!revealjs) { %>
+</div>
+<% } %>	

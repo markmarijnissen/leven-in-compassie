@@ -17,3 +17,6 @@ RewriteRule .* - [F]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteRule aanbod/cursus aanbod/cursus-geweldloze-communicatie [NC,L]
+RewriteRule agenda aanbod [NC,L]

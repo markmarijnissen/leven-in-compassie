@@ -1,0 +1,115 @@
+mixin later 
+	span(title="Zodra er 6 aanmeldingen zijn plannen we samen een datum.").abbr Z.s.m. na 6 aanmeldingen.
+
+mixin link(href)
+	tr
+		td(colspan="2").text-center
+			a(href="/aanbod/#{href}") Lees meer
+
+mixin header(href,title)
+	h4.red.text-center: a(href="/aanbod/#{href}") #{title}
+
+if !embed
+	.row
+		.col-sm-12
+			h1.title Aanbod
+.row: div(class="#{ !embed? 'col-sm-8 col-sm-offset-2': '' }"): .row
+	.col-sm-6.col-md-6
+		+header('introductie-geweldloze-communicatie','Introductie')
+		table.table.table-condensed.aanbod
+			tr: th(colspan="2").text-center Middagworkshop van 4 uur
+			tr
+				//-td.text-right: strong Wat?
+				td(colspan="2")
+					.aanbod-desc
+						| Introductie in de vier stappen en de valkuilen. 
+			if !embed
+				tr
+					td.text-right: strong Voor wie?
+					td Beginners
+				tr
+					td: .aanbod-when.text-right: strong Wanneer?
+					td: +later()
+			+link('introductie-geweldloze-communicatie')
+		
+		
+
+	.col-sm-6.col-md-6
+		+header('cursus-geweldloze-communicatie','Communiceren met Compassie')
+		table.table.table-condensed.aanbod
+			tr: th(colspan="2").text-center Cursus van 6 avonden
+			tr
+				//-td.text-right: strong Wat?
+				td(colspan="2")
+					.aanbod-desc
+						| Ontwikkel vaardigheden voor verbinding, inzicht en empathie. 
+			if !embed
+				tr
+					td.text-right: strong Voor wie?
+					td Beginners
+				tr.aanbod-accent
+					td: .aanbod-when.text-right: strong Wanneer?
+					td Vrijdag van 19:15 tot 22:00 op <br/>8, 15, 22, 29 januari en 5 en 12 februari.
+			+link('cursus-geweldloze-communicatie')
+		
+
+	.col-sm-6.col-md-6
+		+header('verbinding-in-je-relatie','Verbinding in je relatie')
+		table.table.table-condensed.aanbod
+			tr: th(colspan="2").text-center Dagworkshop / Privé Sessie van 2,5 uur
+			tr
+				//-td.text-right: strong Wat?
+				td(colspan="2")
+					.aanbod-desc
+						| Kom dichter bij elkaar en vind meer intimiteit en diepgang. 
+			if !embed
+				tr
+					td.text-right: strong Voor wie?
+					td Beginners en gevorderd.
+				tr
+					td: .aanbod-when.text-right: strong Wanneer?
+					td 
+						+later()
+						br
+						| Sessie op afspraak.
+			+link('aanbod/verbinding-in-je-relatie')
+
+		
+	//-.clear.hidden-sm.hidden-xs &nbsp;
+	.col-sm-6.col-md-6
+		+header('ontmoeting-in-aandacht','Ontmoeting in Aandacht')
+		table.table.table-condensed.aanbod
+			tr: th(colspan="2").text-center Middagworkshop van 5 uur
+			tr
+				//-td.text-right: strong Wat?
+				td(colspan="2")
+					.aanbod-desc
+						| Persoonlijke groei door elkaar te ontmoeten in mindfulness. 
+			if !embed
+				tr
+					td.text-right: strong Voor wie?
+					td Gevorderd
+				tr
+					td: .aanbod-when.text-right: strong Wanneer?
+					td: +later()
+			+link('ontmoeting-in-aandacht')
+
+	//-.col-sm-6.col-md-6
+		+header('conflict-bemiddeling','Conflictbemiddeling')
+		table.table.table-condensed.aanbod
+			tr: th(colspan="2").text-center Sessie van 2,5 uur
+			tr
+				//-td.text-right: strong Wat?
+				td(colspan="2")
+					.aanbod-desc
+						| Kom tot wederzijds begrip en oplossingen bij een conflict. 
+			if !embed
+				tr
+					td.text-right: strong Voor wie?
+					td Relatie, co-ouders, buren, zakelijk
+				tr
+					td: .aanbod-when.text-right: strong Wanneer?
+					td Op afspraak
+			+link('conflict-bemiddeling')
+if !embed
+	!= partial('../_emailfooter')

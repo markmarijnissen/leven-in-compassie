@@ -4,6 +4,7 @@ require('./layout');
 require('./theme/style.less');
 require('./bootstrap/js/dropdown');
 require('./bootstrap/js/affix');
+require('./bootstrap/js/tooltip');
 require('./callmeback.js');
 require('./email.js');
 require('./order.js');
@@ -36,11 +37,15 @@ $(function(){
 		$('.menu-select').focus();
 	});
 
-	$(window).on('hashchange',function(){
-		setTimeout(function(){
-			headroom.unpin();
-		},0);
-	});
+	if(typeof headroom != 'undefined'){
+		$(window).on('hashchange',function(){
+			setTimeout(function(){
+				headroom.unpin();
+			},0);
+		});
+	}
+
+	$('.abbr').tooltip();
 
 	// Generate TOC
 	$toc = $('#toc');

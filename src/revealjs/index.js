@@ -5,8 +5,8 @@ var Reveal = window.Reveal = require('./js/reveal.js');
 
 $(function(){
   Reveal.initialize({
-    width: 640,
-    height: 480,
+    width: 640 * 1.2,
+    height: 480 * 1.2,
     margin: 0,
     minScale: 0.5,
     maxScale: 1.5,

@@ -1,33 +1,30 @@
 {	
 	"index":{
-		"title":"Aanbod"
+		"title":"Aanbod",
+		"format":"container"
 	},
-	"oefengroep":{
-		"title":"Open Oefengroep"
+	"cursus":{
+		"redirect":"/aanbod/cursus-geweldloze-communicatie-geweldloze-communicatie"
+	},
+	"introductie-geweldloze-communicatie":{
+		"title":"Introductie Workshop"
+	},
+	"cursus-geweldloze-communicatie":{
+		"title":"Avondcursus: Communiceren met Compassie"
+	},
+	"ontmoeting-in-aandacht":{
+		"title":"Ontmoeting in Aandacht"
 	},
 	"persoonlijke-coaching":{
 		"title":"Persoonlijke Coaching"
 	},
 	"verbinding-in-je-relatie":{
-		"title":"Dagworkshop: Verbinden in je relatie"
-	},
-	"introduction-nvc-nijmegen":{
-		"title": "Weekend introduction to Nonviolent Communication (with Oriane Boyer)",
-		"hide_title": true
-	},
-	"cursus":{
-		"format":"container",
-		"title":"Avondcursus: Communiceren met Compassie"
+		"title":"Verbinding in je relatie"
 	},
 	"relatie-sessie":{
 		"title":"Relatie Sessie"
 	},
-	"voor-bedrijven":{
-		"title": "Voor bedrijven"
-	},
-	"ontmoeting-in-aandacht":{
-		"format":"container",
-		"title":"Ontmoeting in Aandacht"
+	"oefengroep-geweldloze-communicatie":{
+		"title":"Open Oefengroep"
 	}
-
 }

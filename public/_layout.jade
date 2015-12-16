@@ -12,6 +12,8 @@ html
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
     meta(name='viewport', content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui") 
+    if redirect
+      meta(http-equiv="refresh" content="0; url=#{redirect}")
     
     link(rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png")
     link(rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png")
@@ -30,58 +32,95 @@ html
     meta(name="msapplication-TileColor" content="#ffffff")
     meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
     meta(name="theme-color" content="#ffffff")
-    script(type='text/javascript', src='/main-bundle.js')      
-    if revealjs
-      script(src="/reveal-bundle.js")
+    if !redirect
+      script(type='text/javascript', src='/main-bundle.js')      
+      if revealjs
+        script(src="/reveal-bundle.js")
   body(class="#{ revealjs? '':'noreveal'}",data-spy="scroll" data-target="#toc")#wrapper
-    if !hide_nav
-      #navbar
-        != partial('_partials/navbar')
-      #navbar-spacer
-    else
-      div(style="height: 80px;") &nbsp;
-    if headerimg
-      //-.headerimg
-      .headerimg(style="background-image: url(\"/assets/#{headerimg}\");")
-        //-img(src="/assets/#{headerimg}")
-        .overlay
-        if !hide_title
-          h1.title!= title  
-    if revealjs
-      .reveal
-        .slides
-          != yield
-    else if format === 'nothing'
-      != yield
-    else  
-      #layout.container
-        if format === 'container'
-          != yield
-        else if format === 'row'
-          .row
-            != yield
-        else 
+    if !redirect
+      if !hide_nav
+        #navbar
+          ul.nav.nav-pills.hidden-xs: each item in menu
+            if item.href
+              if item.blank
+                li: a(href="#{item.href}",target="_blank") #{item.title}
+              else
+                li: a(href="#{item.href}") #{item.title}
+            else
+              li.dropdown
+                a.dropdown-toggle(href="#",data-target="#",data-toggle="dropdown") 
+                  | #{item.title}
+                  span.caret(style="line-height: 10px;")
+                ul.dropdown-menu
+                  each subitem in item.items
+                    if subitem.title === '---'
+                      li.divider
+                    else if subitem.blank
+                      li: a(href="#{subitem.href}",target="_blank") #{subitem.title}
+                    else
+                      li: a(href="#{subitem.href}") #{subitem.title}
+          form.form-inline.visible-xs
+            .input-group
+              span.input-group-addon.menu Menu: 
+              select#navselect.form-control.menu-select
+                each item in menu
+                  if item.href
+                    option(value="#{item.href}") #{item.title}
+                  else 
+                    optgroup(label="#{item.title}")
+                      each subitem in item.items
+                        if subitem.title !== '---'
+                          option(value="#{subitem.href}") #{subitem.title}
+        #navbar-spacer
+      //-else
+        div(style="height: 80px;") &nbsp;
+      if headerimg
+        //-.headerimg
+        .headerimg(style="background-image: url(\"/assets/#{headerimg}\");")
+          //-img(src="/assets/#{headerimg}")
+          .overlay
           if !hide_title
-            .row: .col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1    
-              h1.title!= title
-          else
-            .col
-          .row
-            .col-md-3.col-sm-1.hidden-xs
-                ul#toc.nav.nav-stacked.toc(data-spy="affix",data-offset-top="180")
-            .col-md-6.col-xs-12.col-sm-10
-              !=yield
+            h1.title!= title  
+      if revealjs
+        .reveal
+          .slides
+            != yield
+      else if format === 'nothing'
+        != yield
+      else  
+        #layout.container
+          if format === 'container'
+            != yield
+          else if format === 'row'
+            .row
+              != yield
+          else 
+            if !hide_title
+              .row: .col-md-6.col-md-offset-3.col-xs-12.col-sm-10.col-sm-offset-1    
+                h1.title!= title
+            else
+              .col
+            .row
+              .col-md-3.col-sm-1.hidden-xs
+                  ul#toc.nav.nav-stacked.toc(data-spy="affix",data-offset-top="180")
+              .col-md-6.col-xs-12.col-sm-10
+                !=yield
 
-    .footer.text-center
-      hr
-      | <a href="/">Leven in Compassie</a> - gebaseerd op <a href="/info/geweldloze-communicatie">Geweldloze Communicatie</a> - door <a href="/over/markmarijnissen">Mark Marijnissen</a> - in <a href="/over/contact">Nijmegen.</a><br/>
-      | Ontvang <a href="https://tinyletter.com/levenincompassie">een uitnodiging</a> voor de volgende activiteit - <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
-        
-    script.
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      .footer.text-center
+        hr
+        | <a href="/">Leven in Compassie</a> - gebaseerd op <a href="/info">Geweldloze Communicatie</a> - door <a href="/over/markmarijnissen">Mark Marijnissen</a> - in <a href="/over/contact">Nijmegen.</a><br/>
+        | Ontvang <a href="https://tinyletter.com/levenincompassie">een uitnodiging</a> voor de volgende activiteit - <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+          
+      script.
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-8460352-6', 'auto');
-        ga('send', 'pageview');
+          ga('create', 'UA-8460352-6', 'auto');
+          ga('send', 'pageview');
+
+      div#fb-root
+      script.
+        (function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+      script(async,src="//platform.twitter.com/widgets.js",charset="utf-8")

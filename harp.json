@@ -8,43 +8,17 @@
 				"title":"Home",
 				"href":"/"
 			},{
-				"title":"Agenda",
-				"href":"/agenda"
-			},{
 				"title":"Aanbod",
-				"items":[
-					{
-						"title":"Ontmoeting in Aandacht",
-						"href":"/aanbod/ontmoeting-in-aandacht"
-					},
-					{
-						"title":"Avondcursus: Communiceren met Compassie",
-						"href":"/aanbod/cursus"
-					},{
-						"title":"---"
-					},{
-						"title":"Persoonlijke Coaching",
-						"href":"/aanbod/persoonlijke-coaching"
-					},{
-						"title":"Relatie Sessie",
-						"href":"/aanbod/relatie-sessie"
-					},{
-						"title":"---"
-					},{
-						"title":"Voor bedrijven",
-						"href":"/aanbod/voor-bedrijven"
-					}
-				]
-			},{
-				"title":"De Methode",
-				"href":"/info/"
+				"href":"/aanbod"
 			},{
 				"title":"Reacties",
 				"href":"/reacties"
-			},
-			{
+			},{
 				"title":"Mark Marijnissen",
 				"href":"/over/markmarijnissen"
+			},{
+				"title":"Over",
+				"href":"/over/leven-in-compassie"
 			},{
 				"title":"Contact",
 				"href":"/over/contact"
