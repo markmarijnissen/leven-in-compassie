@@ -1,4 +1,5 @@
 var queryparams = require('./queryparams');
+var xhr = require('./xhr');
 
 function Order(opts){
     this.opts = opts;
@@ -14,6 +15,7 @@ function Order(opts){
         //"city":"Nijmegen",
         //"telephone":"0612345678",
         //"accept":true
+        "order":true
     };
     this.validate = {
         "issuer":/.*/,
@@ -25,6 +27,7 @@ function Order(opts){
         "quantity":/^[0-9]{1,2}$/,
         "telephone":/^(0031|\+31|0)([0-9]){9}$/,
         "accept":/^true$/,
+        "subscribe":/^(false|true)$/,
         "comment":/.*/
     };
 
@@ -104,10 +107,12 @@ Order.prototype._exec = function Exec(method,action,data){
 };
 
 Order.prototype.getStatus = function(){
+    var self = this;
     this._exec('GET','status/'+queryparams.ref)
         .done(function(result){
             if(result.status === 'paid' || queryparams.success === 'true'){
                 $('.success').show();
+                xhr('POST https://hooks.zapier.com/hooks/catch/164397/b7k67r/',self.order);
 
                 // var widget = {
                 //     ref: queryparams.ref,
@@ -138,7 +143,7 @@ Order.prototype._validateField = function validatField(ev){
     $el = $(ev.target);
     var name = $el.attr('name');
     var val = $el.val().trim();
-    if(name === 'accept'){
+    if(name === 'accept' || name === 'subscribe'){
         val = $el.is(':checked');
     }
     this._showValid($el,this.validate[name].test(val+''));
@@ -150,7 +155,7 @@ Order.prototype._validate = function validateAll(){
     var self = this;
     $.each(this.validate,function(name,regex){
         $el = $('[name="'+name+'"]');
-        var val = name === 'accept'? $el.is(':checked'): $el.val();
+        var val = name === 'accept' || name === 'subscribe'? $el.is(':checked'): $el.val();
         if(!regex.test(val+'')){
             valid = false;
         } else {
@@ -241,8 +246,9 @@ Order.prototype.pay = function Pay(){
 };
 
 $(function(){
+    var token = location.host === "localhost:9000"? 'test-rxcWA1HIZM':'zhMz3IMtrC';
     window.order = new Order({
-        url:'http://www.levenincompassie.nl/api/[ACTION]?token='+API_KEY,
+        url:'http://www.levenincompassie.nl/api/[ACTION]?token='+token,
         forcePay: !!queryparams['force-pay'],
         product: queryparams.p || $('#aanmelden').attr('product')
     });

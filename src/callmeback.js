@@ -1,4 +1,5 @@
 $(function(){
+	var xhr = require('./xhr');
 	var callMeBackRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/callmeback');
 	var phoneRegex = /^0[0-9]{9}$/;
 	var $name = $('.callmeback-name');
@@ -6,26 +7,37 @@ $(function(){
 	var $button = $('.callmeback-btn');
 	var $form = $('.callmeback-form');
 
+	function ok(){
+		$button
+			.attr('disable',true)
+		    .removeClass('btn-default')
+			.addClass('btn-success disabled')
+			.text('Bedankt!');
+	}
+
+	function fail(){
+		alert('Er ging iets mis. Probeer opnieuw.');
+	}
+
 	$button.click(function(){
 		if(validate()){
 			if(ga) ga('send', 'event', 'button', 'click', 'callmeback');
 			var name = $name.val();
 			var number = $number.val();
-			
-			callMeBackRef.push({
+			var data = {
 				name: name || "",
 				number: number || ""
-			},function(err){
-				if(err){
-					alert('Er ging iets mis. Probeer opnieuw.');
-				} else {
-					$button
-						.attr('disable',true)
-					    .removeClass('btn-default')
-						.addClass('btn-success disabled')
-						.text('Bedankt!');
-				}
-			});	
+			};
+			
+			xhr('POST https://hooks.zapier.com/hooks/catch/164397/1dxz2/',data).then(ok,fail);
+
+			// callMeBackRef.push(,function(err){
+			// 	if(err){
+			// 		fail();
+			// 	} else {
+			// 		ok();
+			// 	}
+			// });	
 
 			trackVar('name',1,name);
 			localStorage.setItem('number',number);

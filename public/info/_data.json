@@ -1,8 +1,23 @@
 {
+	"markmarijnissen":{
+		"format":"row",
+		"title":"Mark Marijnissen"
+	},
+	"leven-in-compassie":{
+		"format":"row",
+		"title":"Leven in Compassie"
+	},
 	"geweldloze-communicatie":{
 		"title":"De Methode"
 	},
 	"index":{
 		"title":"De Methode"
+	},
+	"kernprincipes":{
+		"format":"row",
+		"title":"Kernprincipes"
+	},
+	"voordelen":{
+		"title":"Voordelen"
 	}
 }

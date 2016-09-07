@@ -1,10 +1,11 @@
 .well
-	p
-		strong Aanmelden
-		p Deze workshop wordt gegeven zodra er 6 aanmeldingen zijn.
-		ol
-			li Je betaalt 10 euro om je <a href="/aanmelden?p=#{product}">aan te melden</a>*.
-			li Zodra er 6 aanmeldingen zijn, bepalen we samen een datum waarop iedereen kan.
-			li Daarna betaal je de overige kosten.
-	p: a.btn.btn-lg.btn-primary(href="/aanmelden?p=#{product}") Aanmelden 
-	p.text-muted *) Indien je na 3 maanden niet langer wil wachten, kun je het geld terugvragen. 
+  p
+    strong Aanmelden
+    p Dit evenement wordt ingepland zodra er voldoende aanmeldingen zijn. 
+    ol
+      li 
+        a(href="/aanmelden?p=#{product}") Meld je aan.
+      li Bij voldoende aanmeldingen ontvang je een datumprikker.
+      li Als je beschikbaar bent op de gekozen datum is je aanmelding <strong>definitief</strong>.
+      li Je ontvangt e-mail ter bevestiging met een link om te betalen via iDeal.
+  p: a.btn.btn-lg.btn-primary(href="/aanmelden?p=#{product}") Aanmelden

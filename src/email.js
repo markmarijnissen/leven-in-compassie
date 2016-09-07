@@ -1,4 +1,5 @@
 $(function(){
+	var xhr = require('./xhr');
 	var emailRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/email');
 	var emailRegex = /^.+@.+\.[a-z]{2,10}$/;
 	var $button = $('.email-btn');
@@ -10,27 +11,38 @@ $(function(){
 
 	var $form = $('.email-form');
 
+	function fail(){
+		alert('Er ging iets mis. Probeer opnieuw.');
+	}
+	function ok(){
+		$button
+				.attr('disable',true)
+			    .removeClass('btn-default')
+				.addClass('btn-success disabled')
+				.text('Bedankt!');
+	}
+
 	$button.click(function(){
 		if(validate()){
 			if(ga) ga('send', 'event', 'button', 'click', 'email');
 			var name = $name.val();
 			var email = $email.val();
-			emailRef.push({
+			var data = {
 				name: name || "",
 				email: email || "",
 				subject: $subject.val() || "",
 				message: $message.val() || ""
-			},function(err){
-				if(err){
-					alert('Er ging iets mis. Probeer opnieuw.');
-				} else {
-					$button
-						.attr('disable',true)
-					    .removeClass('btn-default')
-						.addClass('btn-success disabled')
-						.text('Bedankt!');
-				}
-			});	
+			};
+
+			xhr('POST https://hooks.zapier.com/hooks/catch/164397/4pscyt/',data).then(ok,fail);
+
+			// emailRef.push(data,function(err){
+			// 	if(err){
+			// 		fail();
+			// 	} else {
+			// 		ok();
+			// 	}
+			// });	
 			
 			trackVar('name',1,name);
 			trackVar('email',2,email);

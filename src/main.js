@@ -5,11 +5,13 @@ require('./theme/style.less');
 require('./bootstrap/js/dropdown');
 require('./bootstrap/js/affix');
 require('./bootstrap/js/tooltip');
+require('./bootstrap/js/modal');
 require('./callmeback.js');
 require('./email.js');
 require('./order.js');
 require('./mouseflow');
 require('./trackVar');
+var bootbox = require('bootbox');
 
 $(function(){
 	$select = $('#navselect');
@@ -39,9 +41,11 @@ $(function(){
 
 	if(typeof headroom != 'undefined'){
 		$(window).on('hashchange',function(){
-			setTimeout(function(){
-				headroom.unpin();
-			},0);
+			if(location.hash.length > 1){
+				setTimeout(function(){
+					headroom.unpin();
+				},0);
+			}
 		});
 	}
 
@@ -66,10 +70,40 @@ $(function(){
 		}
 	}
 
+	// AANBOD click white vlak voor open
+	$('.aanbod-header a').each(function(i,el) { 
+		var href = $(el).attr('href'); 
+		var $table = $(el).parent().parent().find('.table');
+		$table.css({cursor:'pointer'});
+		$table.click(function(){  
+			location.href = href; 
+		});  
+	});
+
 	// MORE CLICKER
 	$('a.more').click(function(){
 		$('#more').removeClass('hidden');
 		$('.more').remove();
 		trackVar('clickmore',3,1);
 	});
+
+	// PASSWORD
+	if(location.pathname.substr(0,8) === '/cursus/'){
+		var unlocked = sessionStorage.getItem('unlocked') ===  'true';
+		if(unlocked){
+			$('#layout').removeClass('password-protected');  
+		} else {
+			bootbox.prompt({
+				'title':'Voer het wachtwoord in',
+				'callback':function(result) {                
+				  if (result === "empathie") {  
+				  	sessionStorage.setItem('unlocked','true'); 
+			    	$('#layout').removeClass('password-protected');    
+				  } else {
+				    location.pathname = "/";                         
+				  }
+				}
+			});
+		}
+	}
 });

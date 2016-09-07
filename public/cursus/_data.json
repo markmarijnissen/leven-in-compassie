@@ -1,0 +1,34 @@
+{
+	"index":{
+		"title":"Communiceren met Compassie",
+		"password":true
+	},
+	"1-behoeftes":{
+		"title":"Les 1 - Behoeftes",
+		"password":true
+	},
+	"2-zelfverbinding-en-gevoelens":{
+		"title":"Les 2 - Zelfverbinding & Gevoelens",
+		"password":true
+	},
+	"3-de-jakhals":{
+		"title":"Les 3 - De Jakhals",
+		"password":true
+	},
+	"4-meerdere-behoeftes-vieren":{
+		"title":"Les 4 - Behoeftes vieren",
+		"password":true
+	},
+	"5-verzoekjes":{
+		"title":"Les 5 - Empowerment: Verzoekjes maken",
+		"password":true
+	},
+	"6-volledig-dialoog":{
+		"title":"Les 6 - Volledig dialoog",
+		"password":true
+	},
+	"empathie-buddy":{
+		"title":"Empathie Buddy",
+		"password":true
+	}
+}

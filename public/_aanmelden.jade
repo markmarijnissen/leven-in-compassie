@@ -109,21 +109,27 @@ style.
                             td: strong &euro; 
                                 span.total-amount
 
-                    .alert.alert-warning.discount-show(style="display: none;") Prijs is inclusief &euro;<span class="discount">...</span> per persoon korting.            
-
-                .form-group
-
+                    .alert.alert-warning.discount-show(style="display: none;") Prijs is inclusief &euro;<span class="discount">...</span> per persoon korting.
+                //-.form-group
                     label Betalen via iDEAL:
                     p: select(name="issuer")#issuers.form-control.input-sm: option Kies een bank
                     .panel(style="margin-bottom: 0"): .panel-body
                         img(src="https://www.ideal.nl/img/statisch/iDEAL-groot.gif",height="48",style="position: relative; top: 3px; margin-left: 10px;").pull-right
                         div Na betaling ben je aangemeld en ontvang je een e-mail ter bevestiging.
-                    
                 .form-group
-
                     .checkbox
                         label(style="display: block;")
-                            input(type="checkbox",name="accept",value="accepted")
+                            input(type="checkbox",name="subscribe",value="subscribe",checked,style="margin-top:6px;")
+                            | Ontvang uitnodiging voor volgende Open Cirkel.
+
+                            div.pull-right
+                                i.glyphicon.glyphicon-ok.valid(style="display: none;")
+                                i.glyphicon.glyphicon-remove.invalid(style="display: none;")
+
+                .form-group
+                    .checkbox
+                        label(style="display: block;")
+                            input(type="checkbox",name="accept",value="accepted",style="margin-top:6px;")
                             | Ik accepteer de 
                             a(href="/algemene-voorwaarden" target="_blank") algemene voorwaarden 
                                 i.glyphicon.glyphicon-new-window(style="font-size: 12px;")

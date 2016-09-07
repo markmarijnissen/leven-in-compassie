@@ -43,8 +43,7 @@ var config = {
     plugins:[
       new webpack.DefinePlugin({
         VERSION: JSON.stringify(version),
-        ENV: JSON.stringify(argv.minify? 'production':'dev'),
-        API_KEY: JSON.stringify(argv.minify? 'zhMz3IMtrC':'test-rxcWA1HIZM'),
+        ENV: JSON.stringify(argv.minify? 'production':'dev')
       })
     ],
     node: {

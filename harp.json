@@ -10,16 +10,37 @@
 			},{
 				"title":"Aanbod",
 				"href":"/aanbod"
-			},{
+			},
+			{
+				"title":"Curriculum",
+				"href":"/curriculum"
+			},
+			{
 				"title":"Reacties",
 				"href":"/reacties"
-			},{
-				"title":"Mark Marijnissen",
-				"href":"/over/markmarijnissen"
-			},{
-				"title":"Over",
-				"href":"/over/leven-in-compassie"
-			},{
+			},
+			{
+				"title":"Info",
+				"items":[
+					{
+						"title":"Voordelen",
+						"href":"/info/voordelen"
+					},{
+						"title":"Kernprincipes",
+						"href":"/info/kernprincipes"
+					},{
+						"title":"Geweldloze Communicatie",
+						"href":"/info/geweldloze-communicatie"
+					},{
+						"title":"Over het bedrijf",
+						"href":"/info/leven-in-compassie"
+					},{
+						"title":"Over Mark Marijnissen",
+						"href":"/info/markmarijnissen"
+					}
+				]
+			},
+			{
 				"title":"Contact",
 				"href":"/over/contact"
 			}

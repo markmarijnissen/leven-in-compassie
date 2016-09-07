@@ -3,5 +3,9 @@
 		"title":"Ontmoeting in Aandacht",
 		"hide_title":true,
 		"hide_nav":true
+	},
+	"index":{
+		"title":"Nieuwsbrief",
+        "format":"container"
 	}
 }

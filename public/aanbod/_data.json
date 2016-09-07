@@ -4,16 +4,22 @@
 		"format":"container"
 	},
 	"cursus":{
-		"redirect":"/aanbod/cursus-geweldloze-communicatie-geweldloze-communicatie"
+		"redirect":"/aanbod/cursus-geweldloze-communicatie"
 	},
 	"introductie-geweldloze-communicatie":{
 		"title":"Introductie Workshop"
+	},
+	"verdiepingsdag":{
+		"title":"Verdiepingsdag"
 	},
 	"cursus-geweldloze-communicatie":{
 		"title":"Avondcursus: Communiceren met Compassie"
 	},
 	"ontmoeting-in-aandacht":{
 		"title":"Ontmoeting in Aandacht"
+	},
+	"open-cirkel":{
+		"title":"Open Cirkel"
 	},
 	"persoonlijke-coaching":{
 		"title":"Persoonlijke Coaching"
@@ -26,5 +32,8 @@
 	},
 	"oefengroep-geweldloze-communicatie":{
 		"title":"Open Oefengroep"
+	},
+	"conflict-bemiddeling":{
+		"title":"Conflict Bemiddeling"
 	}
 }

@@ -105,21 +105,26 @@ Flight::route('POST /pay',function(){
         "method"       => Mollie_API_Object_Method::IDEAL,
         "webhookUrl"=>"http://www.levenincompassie.nl/api/webhook?token=" . Flight::request()->query['token'],
         "redirectUrl"  => $redirectURL,
-        'metadata' => $order + ['id'=>$id],
-        "issuer"       => $order['issuer']
+        'metadata' => $order + ['id'=>$id]
     ];
 
+    if(isset($order['issuer']) && $order['issuer'] != "Kies een bank"){
+        $molliePaymentInfo["issuer"] = $order['issuer'];
+    }
+
     // Create payment (API call)
-    $payment = $mollie->payments->create($molliePaymentInfo);
+    if(ENABLE_PAYMENT){
+	    $payment = $mollie->payments->create($molliePaymentInfo);
+    }
 
     // Store Mollie Payment data with submitted form info.
     $order['payment'] = [
         'id' => $payment->id,
         'amount' => $molliePaymentInfo['amount'],
         'description' => $molliePaymentInfo['description'],
-        'status' => $payment->status,
+        'status' => ENABLE_PAYMENT? $payment->status: 'paid',
         'email'=> false,
-        'paymentUrl' => $payment->getPaymentUrl()
+        'paymentUrl' => ENABLE_PAYMENT? $payment->getPaymentUrl(): "/bedankt?ref=$id"
     ];
 
     // Store order in firebase
@@ -127,6 +132,10 @@ Flight::route('POST /pay',function(){
 
     // Track number of participants
     $firebase->set(FIREBASE_PATH . "/products/{$order['product']}/participants/$id",$order['quantity']);
+
+    if(!ENABLE_PAYMENT){                    // cast to object
+    	confirmOrder('paid',$order->product,json_decode(json_encode($order)));
+    }
 
     // Response
     Flight::json($order['payment'],200);
@@ -164,17 +173,17 @@ Flight::route('POST /webhook-test',function(){
 
 Flight::route('GET /status/@ref',function($ref){
     global $mollie, $firebase;
-
-    $id = json_decode($firebase->get(FIREBASE_PATH . "/orders/$ref/payment/id"));
-
-    try{
-        $payment  = $mollie->payments->get($id);
-        Flight::json(['status'=>$payment->status],200);
-    } catch(\Exception $e){
-        Flight::json(['status'=>'invalid_ref','ref'=>$ref,'id'=>$id, 'error'=>$e->getMessage()],200);
-    }
-
-
+    if(ENABLE_PAYMENT){
+	    $id = json_decode($firebase->get(FIREBASE_PATH . "/orders/$ref/payment/id"));
+	    try{
+	        $payment  = $mollie->payments->get($id);
+	        Flight::json(['status'=>$payment->status],200);
+	    } catch(\Exception $e){
+	        Flight::json(['status'=>'invalid_ref','ref'=>$ref,'id'=>$id, 'error'=>$e->getMessage()],200);
+	    }
+	} else {
+		Flight::json(['status'=>'paid'],200);
+	}
 });
 
 /**

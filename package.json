@@ -18,6 +18,7 @@
   "homepage": "https://github.com/markmarijnissen/nvc-website",
   "dependencies": {
     "autoprefixer-loader": "^1.2.0",
+    "bootbox": "^4.4.0",
     "broken-link-checker": "stevenvachon/broken-link-checker",
     "jade": "jadejs/jade",
     "jquery": "^2.1.3",

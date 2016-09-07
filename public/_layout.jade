@@ -88,7 +88,7 @@ html
       else if format === 'nothing'
         != yield
       else  
-        #layout.container
+        #layout(class="#{password? 'password-protected': ''} container")
           if format === 'container'
             != yield
           else if format === 'row'
@@ -108,8 +108,8 @@ html
 
       .footer.text-center
         hr
-        | <a href="/">Leven in Compassie</a> - gebaseerd op <a href="/info">Geweldloze Communicatie</a> - door <a href="/over/markmarijnissen">Mark Marijnissen</a> - in <a href="/over/contact">Nijmegen.</a><br/>
-        | Ontvang <a href="https://tinyletter.com/levenincompassie">een uitnodiging</a> voor de volgende activiteit - <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+        | <a href="/">Leven in Compassie</a> - gebaseerd op <strong>Geweldloze Communicatie</strong> - door <a href="/info/markmarijnissen">Mark Marijnissen</a> - in <a href="/over/contact">Nijmegen.</a><br/>
+        | Ontvang <a href="http://eepurl.com/cbgx0D">een uitnodiging</a> voor de volgende activiteit - <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
           
       script.
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

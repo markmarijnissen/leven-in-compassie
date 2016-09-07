@@ -5,14 +5,14 @@
 		"revealjs":false,
 		"format":"container"
 	},
-    "slides":{
+    "rollen":{
         "hide_title":true,
         "hide_nav":true,
         "title":"Leven in Compassie",
         "revealjs":true,
         "format":"container"
     },
-	"agenda":{
+    "agenda":{
         "redirect":"/aanbod",
         "format":"row",
 		"title":"Agenda"
@@ -35,6 +35,12 @@
     	"hide_title":true,
         "title":"Bedankt",
         "format":"nothing"
+    },
+    "curriculum":{
+        "title":"Curriculum:<br/>Communiceren met Compassie"
+    },
+    "certificaat":{
+        "redirect":"/curriculum"
     },
     "algemene-voorwaarden":{
     	"title":"Algemene Voorwaarden",
