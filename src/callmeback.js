@@ -1,6 +1,6 @@
 $(function(){
 	var xhr = require('./xhr');
-	var callMeBackRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/callmeback');
+	//var callMeBackRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/callmeback');
 	var phoneRegex = /^0[0-9]{9}$/;
 	var $name = $('.callmeback-name');
 	var $number = $('.callmeback-number');

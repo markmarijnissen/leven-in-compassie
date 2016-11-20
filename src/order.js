@@ -237,11 +237,16 @@ Order.prototype.getIssuers = function GetIssuers(){
 
 Order.prototype.pay = function Pay(){
     if(ga) ga('send', 'event', 'button', 'click', 'aanmelden');
+    this.el.submit.attr('disabled',true);
+    this.el.submit.text('Bezig...');
     return this._exec('POST','pay',this.order)
         .done(function(payment){
             localStorage.setItem('order-payment',JSON.stringify(payment));
             location.href = payment.paymentUrl;
-        });
+        })
+        .fail(function(){
+            $('.error').show();
+        })
 
 };
 

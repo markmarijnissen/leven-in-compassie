@@ -45,5 +45,8 @@
     "algemene-voorwaarden":{
     	"title":"Algemene Voorwaarden",
     	"format":"row"
+    },
+    "geenafleiding":{
+      "title":"30 dagen geen afleiding"
     }
 }

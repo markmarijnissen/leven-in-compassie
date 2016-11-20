@@ -1,6 +1,6 @@
 $(function(){
 	var xhr = require('./xhr');
-	var emailRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/email');
+	//var emailRef = new Firebase('https://madebymark.firebaseio.com/levenincompassie/email');
 	var emailRegex = /^.+@.+\.[a-z]{2,10}$/;
 	var $button = $('.email-btn');
 

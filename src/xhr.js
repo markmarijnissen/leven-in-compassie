@@ -1,3 +1,4 @@
+var Promise = require('promise-polyfill');
 module.exports = function(url,params){
     var method = 'GET';
     if(url.substr(0,4) === 'GET ') {
