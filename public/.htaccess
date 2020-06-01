@@ -6,6 +6,8 @@ AddType image/svg+xml svg
 
 RewriteEngine On
 
+DirectoryIndex index.html
+
 ## STOP REFERRER SPAM
 RewriteCond %{HTTP_REFERER} success\-seo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} semalt\.com [NC,OR]
@@ -13,10 +15,18 @@ RewriteCond %{HTTP_REFERER} best\-seo\-solution\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} best\-seo\-offer\.com [NC]
 RewriteRule .* - [F]
 
+# STRIP WWW
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule .* https://levenincompassie.nl%{REQUEST_URI} [R,NC]
+
+# REDIRECT TO HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,NC]
+
 # HTML
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule aanbod/cursus/?$ /aanbod/cursus-geweldloze-communicatie [R,NC]
-RewriteRule agenda /aanbod [R,NC]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule aanbod/cursus/?$ /aanbod/cursus-geweldloze-communicatie [R,NC]
+# RewriteRule agenda /aanbod [R,NC]
 RewriteRule (.*)/$ $1/index.html [NC,L]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
