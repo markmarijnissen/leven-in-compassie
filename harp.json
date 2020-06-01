@@ -1,47 +1,46 @@
 {
-	"globals":{
-		"title":"Leven in compassie",
-		"locatie_blauwe_deur":"https://www.google.com/maps/@51.847211,5.868349,3a,75y,359.14h,86.16t/data=!3m4!1e1!3m2!1sOgpXj0vVevjVx5AWtPYwiQ!2e0?hl=nl",
-		"locatie_lindenberg":"https://www.google.com/maps/place/Ridderstraat+29,+6511+TM+Nijmegen,+Nederland/@51.8473189,5.8684023,17z/data=!3m1!4b1!4m2!3m1!1s0x47c7084595b8a537:0xc0fe1e3f7c568e1e?hl=nl",
-		"menu":[
-			{
-				"title":"Home",
-				"href":"/"
-			},{
-				"title":"Aanbod",
-				"href":"/aanbod"
-			},
-			{
-				"title":"Curriculum",
-				"href":"/curriculum"
-			},
-			{
-				"title":"Reacties",
-				"href":"/reacties"
-			},
-			{
-				"title":"Info",
-				"items":[
-					{
-						"title":"Voordelen",
-						"href":"/info/voordelen"
-					},{
-						"title":"Kernprincipes",
-						"href":"/info/kernprincipes"
-					},{
-						"title":"Over Leven in Compassie",
-						"href":"/info/leven-in-compassie"
-					},{
-						"title":"Over Mark Marijnissen",
-						"href":"/info/markmarijnissen"
-					}
-				]
-			},
-			{
-				"title":"Contact",
-				"href":"/over/contact"
-			}
-
-		]
-	}
+  "globals": {
+    "title": "Leven in compassie",
+    "locatie_blauwe_deur": "https://www.google.com/maps/@51.847211,5.868349,3a,75y,359.14h,86.16t/data=!3m4!1e1!3m2!1sOgpXj0vVevjVx5AWtPYwiQ!2e0?hl=nl",
+    "locatie_lindenberg": "https://www.google.com/maps/place/Ridderstraat+29,+6511+TM+Nijmegen,+Nederland/@51.8473189,5.8684023,17z/data=!3m1!4b1!4m2!3m1!1s0x47c7084595b8a537:0xc0fe1e3f7c568e1e?hl=nl",
+    "menu": [
+      {
+        "title": "Home",
+        "href": "/"
+      },
+      {
+        "title": "Aanbod",
+        "href": "/aanbod"
+      },
+      {
+        "title": "Reacties",
+        "href": "/reacties"
+      },
+      {
+        "title": "Info",
+        "items": [
+          {
+            "title": "Voordelen",
+            "href": "/info/voordelen"
+          },
+          {
+            "title": "Kernprincipes",
+            "href": "/info/kernprincipes"
+          },
+          {
+            "title": "Over Leven in Compassie",
+            "href": "/info/leven-in-compassie"
+          },
+          {
+            "title": "Over Mark Marijnissen",
+            "href": "/info/markmarijnissen"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "href": "/over/contact"
+      }
+    ]
+  }
 }

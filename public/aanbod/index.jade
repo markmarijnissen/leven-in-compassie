@@ -16,59 +16,59 @@ mixin title(title)
   else
     h4 #{title.toUpperCase()}
 
-- var aanbod = ['open-cirkel','ontmoeting-in-aandacht']
+- var aanbod = ['cursusx','introductie-geweldloze-communicatie','verbinding-in-je-relatie','conflict-bemiddeling','persoonlijke-coaching']
 
 if !embed
   .row
     .col-sm-12
       h1.title Aanbod
 .row: div(class="#{ !embed? 'col-sm-8 col-sm-offset-2': '' }")
-  //- .row
-  //-   .col-sm-6.col-md-6.col-sm-offset-3.col-md-offset-3
-  //-     +header('open-cirkel','Open Cirkel')
-  //-     table.table.white.table-condensed.aanbod
-  //-       tr
-  //-         td(colspan="2").text-center: strong Ruimte om te zijn met wat er in je leeft.
-  //-       tr
-  //-         td.text-right: strong Hoe?
-  //-         td.text-left Spreken en luisteren in aandacht door meditatie
-  //-           |  en geweldloze communicatie.
-  //-       tr
-  //-         td.text-right: strong Voor wie?
-  //-         td.text-left Iedereen is welkom
-  //-       tr
-  //-         td.text-right: strong Wanneer?
-  //-         td.text-left Elke 2 weken op woensdag van 19:00 tot 21:00.
+  if aanbod.indexOf('open-cirkel') >= 0
+    .row
+      .col-sm-6.col-md-6.col-sm-offset-3.col-md-offset-3
+        +header('open-cirkel','Open Cirkel')
+        table.table.white.table-condensed.aanbod
+          tr
+            td(colspan="2").text-center: strong Ruimte om te zijn met wat er in je leeft.
+          tr
+            td.text-right: strong Hoe?
+            td.text-left Spreken en luisteren in aandacht door meditatie
+              |  en geweldloze communicatie.
+          tr
+            td.text-right: strong Voor wie?
+            td.text-left Iedereen is welkom
+          tr
+            td.text-right: strong Wanneer?
+            td.text-left Elke 2 weken op woensdag van 19:00 tot 21:00.
 
-  //-       tr.aanbod-accent
-  //-         td: .aanbod-when.text-right: strong Aanmelden
-  //-         td.text-left Antwoord op de
-  //-           a(href="http://www.levenincompassie.nl/aanbod/open-cirkel#aanmelden") uitnodiging per e-mail
-  //-           | .
-  //-       +link('cursus-geweldloze-communicatie')
+          tr.aanbod-accent
+            td: .aanbod-when.text-right: strong Aanmelden
+            td.text-left Antwoord op de
+              a(href="http://www.levenincompassie.nl/aanbod/open-cirkel#aanmelden") uitnodiging per e-mail
+              | .
+          +link('cursus-geweldloze-communicatie')
   if true
     .row
       .col-xs-12
-        +title('Niveau 1: Welkom in de wereld van Leven in Compassie')
-      .col-sm-6.col-md-6
-        +header('cursus-geweldloze-communicatie','Communiceren met Compassie')
-        table.table.white.table-condensed.aanbod
-          tr
-            td(colspan="2").text-center: strong Leer de vaardigheden om meer verbinding, inzicht en empathie in je leven te brengen.
-          tr
-            td.text-right: strong Hoe?
-            td.text-left 4 dagen met begeleide oefeningen inclusief theorie, community, huiswerk en individuele begeleiding.
-          tr
-            td.text-right: strong Voor wie?
-            td.text-left Ongeoefend in Geweldloze Communicatie
-          tr
-            td.text-right: strong Wanneer?
-            td.text-left: +later()
-          tr.aanbod-accent
-            td: .aanbod-when.text-right: strong Aanmelden
-            td.text-left
-              a.btn.btn-primary.btn-xs(href="/aanbod/cursus-geweldloze-communicatie#aanmelden") Klik hier
-          +link('cursus-geweldloze-communicatie')
+        //-+title('Op aanvraag')
+        p Bij voldoende vraag kunnen de volgende trainingen of individuele sessies worden ingepland.
+      if aanbod.indexOf('cursus') >= 0
+        .col-sm-6.col-md-6.col-sm-offset-3.col-md-offset-3
+          +header('cursus-geweldloze-communicatie','Communiceren met Compassie')
+          table.table.white.table-condensed.aanbod
+            tr: th(colspan="2").text-center 4 dagen + 2 coachsessies + theorie + huiswerk + community.
+            tr: td(colspan="2")
+                .aanbod-desc
+                  | Leer de vaardigheden om meer verbinding, inzicht en empathie in je leven te brengen.
+            if !embed
+              tr
+                td.text-right: strong Voor wie?
+                td Ongeoefend in Geweldloze Communicatie
+              tr
+                td: .aanbod-when.text-right: strong Wanneer?
+                td
+                  +later()
+            +link('cursus-geweldloze-communicatie')
 
       if aanbod.indexOf('ontmoeting-in-aandacht') >= 0
         .col-sm-6.col-md-6
@@ -91,61 +91,9 @@ if !embed
                   a.btn.btn-primary.btn-xs(href="/aanbod/ontmoeting-in-aandacht#aanmelden") Klik hier
             +link('ontmoeting-in-aandacht')
 
-    //-.row
-      .col-xs-12
-        +title('Niveau 2: Verdiepingsdagen')
-      //-.col-sm-6.col-md-6
-        +header('verdiepingsdag','Verdiepingsdag')
-        table.table.white.table-condensed.aanbod
-          tr: th(colspan="2").text-center: strong Verdiep je vaardigheden met Geweldloze Communicatie in allerlei herkenbare en uitdagende situaties.
-          tr
-            td.text-right: strong Hoe?
-            td.text-left Begeleide oefeningen met een thema, inclusief spiekbrief voor thuis.
-          tr
-            td.text-right: strong Voor wie?
-            td.text-left Iedereen bekend met basis van Geweldloze Communicatie.
-          tr.aanbod-accent
-            td: .aanbod-when.text-right: strong Wanneer?
-            td.text-left Dagworkshop. Momenteel niet ingepland.
-          +link('verdiepingsdag')
-      //-.col-sm-6.col-md-6
-        +header('verdiepingsdag','Vervelende mensen')
-        table.table.white.table-condensed.aanbod
-          tr: th(colspan="2").text-center Cursus van 1 dag
-          tr: td(colspan="2")
-              .aanbod-desc
-                | Van oordeel naar compassie
-          tr
-            td.text-right: strong Voor wie?
-            td.text-left Niveau 1 of vergelijkbaar
-          tr.aanbod-accent
-            td: .aanbod-when.text-right: strong Wanneer?
-            td.text-left Zondag 24 april van 12:30 tot 17:00
-          +link('verdiepingsdag')
-      //-.col-sm-6.col-md-6
-        +header('verdiepingsdag','Stilte in de storm')
-        table.table.white.table-condensed.aanbod
-          tr: th(colspan="2").text-center Cursus van 1 dag
-          tr: td(colspan="2")
-              .aanbod-desc
-                | Zelfverbinding bij uitdagende situaties
-          tr
-            td.text-right: strong Voor wie?
-            td.text-left Niveau 1 of vergelijkbaar
-          tr.aanbod-accent
-            td: .aanbod-when.text-right: strong Wanneer?
-            td.text-left Zondag 22 mei van 12:30 tot 17:00
-          +link('verdiepingsdag')
-
-  if !embed
-    .row
-      //-.col-xs-12
-        +title('Op aanvraag')
-        p Bij voldoende vraag kunnen de volgende trainingen of individuele sessies worden ingepland.
-
       if aanbod.indexOf('introductie-geweldloze-communicatie') >= 0
         .col-sm-6.col-md-6
-          +header('introductie-geweldloze-communicatie','Introductie')
+          +header('introductie-geweldloze-communicatie','Introductie workshop')
           table.table.white.table-condensed.aanbod
             tr: th(colspan="2").text-center Middagworkshop van 4 uur
             tr: td(colspan="2")
@@ -219,7 +167,7 @@ if !embed
                 td Op afspraak
             +link('persoonlijke-coaching')
 if !embed
-  p.text-center(style="padding: 10px;") Bekijk het
+  //- p.text-center(style="padding: 10px;") Bekijk het
     a(href="/curriculum") curriculum
     |  om te zien wat je leert bij Niveau 2 in "Communiceren met Compassie".
   != partial('../_emailfooter')
