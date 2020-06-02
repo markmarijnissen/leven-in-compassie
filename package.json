@@ -22,7 +22,7 @@
     "broken-link-checker": "stevenvachon/broken-link-checker",
     "harp": "^0.32.0",
     "jade": "jadejs/jade",
-    "jquery": "^2.1.3",
+    "jquery": "^3.5.0",
     "jstransformer-markdown": "^1.1.0",
     "jstransformer-marked": "^1.0.1",
     "polyfill-function-prototype-bind": "0.0.1",
