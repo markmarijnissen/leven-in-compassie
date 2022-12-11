@@ -27,7 +27,7 @@
     "jstransformer-marked": "^1.0.1",
     "polyfill-function-prototype-bind": "0.0.1",
     "raf": "^2.0.4",
-    "reveal.js": "^3.1.0"
+    "reveal.js": "^3.9.2"
   },
   "devDependencies": {
     "autoprefixer-loader": "^1.0.0",
